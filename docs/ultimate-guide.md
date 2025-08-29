@@ -29,18 +29,42 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 ## Quick Picks: Our Top 3 Paddles for 2025
 
 ### 🏆 **Best Overall: JOOLA Ben Johns Perseus CFS 16mm**
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://joola.com/cdn/shop/files/Ben-Johns-Perseus-CFS-16-18516-Web-01_grande.jpg?v=1712314613" 
+       alt="JOOLA Ben Johns Perseus CFS 16mm Pickleball Paddle - Professional Tournament Grade" 
+       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>JOOLA Ben Johns Perseus CFS - World #1 Player's Signature Paddle</em></p>
+</div>
+
 - **Price**: $209.96 (down from $279.95)
 - **Perfect for**: Advanced players seeking tournament-grade performance
 - **Why we love it**: World #1 player's signature paddle with revolutionary Carbon-Flex5 technology
 - **[Check Current Price on Amazon →](https://amazon.com/dp/B0BQJ9XQYZ?tag=getapickle-20)**
 
 ### 💰 **Best Value: Six Zero Double Black Diamond Control**
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://cdn.shopify.com/s/files/1/0586/0045/0309/files/SixZero_DoubleBD_Control_grande.jpg" 
+       alt="Six Zero Double Black Diamond Control Pickleball Paddle - Best Value Premium Paddle" 
+       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>Six Zero Double Black Diamond - Premium Performance at Mid-Range Price</em></p>
+</div>
+
 - **Price**: $162-180
 - **Perfect for**: Players wanting premium performance without the premium price
 - **Why we love it**: Called "as close to perfect as any tested" by experts
 - **[Check Current Price at Six Zero →](https://sixzeropickleball.com/dbd?ref=getapickle)**
 
 ### 🎯 **Best Beginner: Vatic Pro Prism Flash**
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://vaticpro.com/cdn/shop/files/DSC03090.jpg?v=1682705162" 
+       alt="Vatic Pro Prism Flash Pickleball Paddle - Best Carbon Fiber Paddle Under $100" 
+       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>Vatic Pro Prism Flash - Premium Carbon Fiber at Beginner Price</em></p>
+</div>
+
 - **Price**: $99
 - **Perfect for**: New players wanting to grow with their equipment
 - **Why we love it**: Raw carbon fiber at a beginner-friendly price
@@ -71,6 +95,13 @@ Before diving into our recommendations, here's our rigorous testing methodology:
 ## Complete Paddle Reviews: 10 Best Paddles for 2025
 
 ### 1. JOOLA Ben Johns Perseus CFS 16mm ⭐⭐⭐⭐⭐
+
+<div style="float: right; margin: 0 0 20px 20px; max-width: 250px; text-align: center;">
+  <img src="https://joola.com/cdn/shop/files/Ben-Johns-Perseus-CFS-16-18516-Web-01_grande.jpg?v=1712314613" 
+       alt="JOOLA Ben Johns Perseus CFS 16mm Professional Pickleball Paddle" 
+       style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
+  <p style="font-size: 11px; color: #666; margin-top: 5px;"><em>Professional tournament-grade construction</em></p>
+</div>
 
 **The Professional's Choice That's Now Affordable**
 
