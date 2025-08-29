@@ -74,10 +74,6 @@ const config: Config = {
     },
     navbar: {
       title: 'Get A Pickleball Paddle',
-      logo: {
-        alt: 'Pickleball Paddle Logo',
-        src: 'img/paddle-logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',
