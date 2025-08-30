@@ -50,7 +50,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: false, // Disable sidebar completely
           routeBasePath: '/',
           editUrl: undefined, // Remove edit links for affiliate site
           showLastUpdateTime: false,
@@ -76,22 +76,24 @@ const config: Config = {
       title: 'Get A Pickleball Paddle',
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'paddleGuides',
+          to: '/ultimate-guide',
           position: 'left',
-          label: 'Paddle Guides',
+          label: 'Ultimate Guide',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'comparisons',
+          to: '/beginner-guide',
           position: 'left',
-          label: 'Comparisons',
+          label: 'Beginner Guide',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'reviews',
+          to: '/budget-paddles',
           position: 'left',
-          label: 'Reviews',
+          label: 'Budget Paddles',
+        },
+        {
+          to: '/premium-comparison',
+          position: 'left',
+          label: 'Premium Paddles',
         },
         {
           href: '/affiliate-disclosure',

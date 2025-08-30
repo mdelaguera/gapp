@@ -30,11 +30,11 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 
 ### 🏆 **Best Overall: JOOLA Ben Johns Perseus CFS 16mm**
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src="https://joola.com/cdn/shop/files/Ben-Johns-Perseus-CFS-16-18516-Web-01_grande.jpg?v=1712314613" 
+<div className="paddle-image-container">
+  <img src="/img/paddles/placeholder-paddle.svg" 
        alt="JOOLA Ben Johns Perseus CFS 16mm Pickleball Paddle - Professional Tournament Grade" 
-       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>JOOLA Ben Johns Perseus CFS - World #1 Player's Signature Paddle</em></p>
+       className="paddle-image" />
+  <p className="paddle-image-caption">JOOLA Ben Johns Perseus CFS - World #1 Player's Signature Paddle</p>
 </div>
 
 - **Price**: $209.96 (down from $279.95)
@@ -44,11 +44,11 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 
 ### 💰 **Best Value: Six Zero Double Black Diamond Control**
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src="https://cdn.shopify.com/s/files/1/0586/0045/0309/files/SixZero_DoubleBD_Control_grande.jpg" 
+<div className="paddle-image-container">
+  <img src="/img/paddles/placeholder-paddle.svg" 
        alt="Six Zero Double Black Diamond Control Pickleball Paddle - Best Value Premium Paddle" 
-       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>Six Zero Double Black Diamond - Premium Performance at Mid-Range Price</em></p>
+       className="paddle-image" />
+  <p className="paddle-image-caption">Six Zero Double Black Diamond - Premium Performance at Mid-Range Price</p>
 </div>
 
 - **Price**: $162-180
@@ -58,11 +58,11 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 
 ### 🎯 **Best Beginner: Vatic Pro Prism Flash**
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src="https://vaticpro.com/cdn/shop/files/DSC03090.jpg?v=1682705162" 
+<div className="paddle-image-container">
+  <img src="/img/paddles/placeholder-paddle.svg" 
        alt="Vatic Pro Prism Flash Pickleball Paddle - Best Carbon Fiber Paddle Under $100" 
-       style="max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <p style="font-size: 12px; color: #666; margin-top: 8px;"><em>Vatic Pro Prism Flash - Premium Carbon Fiber at Beginner Price</em></p>
+       className="paddle-image" />
+  <p className="paddle-image-caption">Vatic Pro Prism Flash - Premium Carbon Fiber at Beginner Price</p>
 </div>
 
 - **Price**: $99
@@ -96,11 +96,11 @@ Before diving into our recommendations, here's our rigorous testing methodology:
 
 ### 1. JOOLA Ben Johns Perseus CFS 16mm ⭐⭐⭐⭐⭐
 
-<div style="float: right; margin: 0 0 20px 20px; max-width: 250px; text-align: center;">
-  <img src="https://joola.com/cdn/shop/files/Ben-Johns-Perseus-CFS-16-18516-Web-01_grande.jpg?v=1712314613" 
+<div className="paddle-image-container float-right">
+  <img src="/img/paddles/placeholder-paddle.svg" 
        alt="JOOLA Ben Johns Perseus CFS 16mm Professional Pickleball Paddle" 
-       style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-  <p style="font-size: 11px; color: #666; margin-top: 5px;"><em>Professional tournament-grade construction</em></p>
+       className="paddle-image" />
+  <p className="paddle-image-caption">Professional tournament-grade construction</p>
 </div>
 
 **The Professional's Choice That's Now Affordable**
