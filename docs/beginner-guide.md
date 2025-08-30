@@ -51,7 +51,7 @@ You want quality construction that won't break, but you don't need pro-level fea
 ### 🏆 #1: Vatic Pro Prism Flash - $99
 
 <div className="paddle-image-container">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/vatic-pro-prism-flash.jpg" 
        alt="Vatic Pro Prism Flash - Best Beginner Pickleball Paddle with Carbon Fiber" 
        className="paddle-image" />
   <p className="paddle-image-caption">Growth Paddle: Beginner-Friendly Yet Advanced Performance</p>

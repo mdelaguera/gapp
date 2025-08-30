@@ -31,7 +31,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 ### 🏆 **Best Overall: JOOLA Ben Johns Perseus CFS 16mm**
 
 <div className="paddle-image-container">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/joola-ben-johns-perseus.jpg" 
        alt="JOOLA Ben Johns Perseus CFS 16mm Pickleball Paddle - Professional Tournament Grade" 
        className="paddle-image" />
   <p className="paddle-image-caption">JOOLA Ben Johns Perseus CFS - World #1 Player's Signature Paddle</p>
@@ -45,7 +45,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 ### 💰 **Best Value: Six Zero Double Black Diamond Control**
 
 <div className="paddle-image-container">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/six-zero-double-black-diamond.png" 
        alt="Six Zero Double Black Diamond Control Pickleball Paddle - Best Value Premium Paddle" 
        className="paddle-image" />
   <p className="paddle-image-caption">Six Zero Double Black Diamond - Premium Performance at Mid-Range Price</p>
@@ -59,7 +59,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
 ### 🎯 **Best Beginner: Vatic Pro Prism Flash**
 
 <div className="paddle-image-container">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/vatic-pro-prism-flash.jpg" 
        alt="Vatic Pro Prism Flash Pickleball Paddle - Best Carbon Fiber Paddle Under $100" 
        className="paddle-image" />
   <p className="paddle-image-caption">Vatic Pro Prism Flash - Premium Carbon Fiber at Beginner Price</p>
@@ -97,7 +97,7 @@ Before diving into our recommendations, here's our rigorous testing methodology:
 ### 1. JOOLA Ben Johns Perseus CFS 16mm ⭐⭐⭐⭐⭐
 
 <div className="paddle-image-container float-right">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/joola-ben-johns-perseus.jpg" 
        alt="JOOLA Ben Johns Perseus CFS 16mm Professional Pickleball Paddle" 
        className="paddle-image" />
   <p className="paddle-image-caption">Professional tournament-grade construction</p>

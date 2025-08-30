@@ -49,7 +49,7 @@ We tested over 30 paddles under $100 across 6 months, evaluating:
 ### 🏆 #1: Vatic Pro Prism Flash - $99
 
 <div className="paddle-image-container float-right">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/vatic-pro-prism-flash.jpg" 
        alt="Vatic Pro Prism Flash - Best Budget Carbon Fiber Pickleball Paddle Under $100" 
        className="paddle-image" />
   <p className="paddle-image-caption">Raw carbon fiber at an impossible price</p>

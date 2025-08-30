@@ -7,6 +7,34 @@
 /* Import paddle image styles */
 @import './paddle-images.css';
 
+/* Full width content since sidebar is removed */
+.main-wrapper {
+  max-width: none !important;
+}
+
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+/* Make docs content use full width */
+.docMainContainer_gTbr {
+  max-width: none !important;
+}
+
+.docItemContainer_Djhp {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .docItemContainer_Djhp {
+    padding: 0 1rem;
+  }
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
