@@ -100,6 +100,11 @@ const config: Config = {
           label: 'Premium Paddles',
         },
         {
+          href: '/ultimate-guide?search=true',
+          label: '🔍 Search',
+          position: 'right',
+        },
+        {
           href: '/affiliate-disclosure',
           label: 'Disclosure',
           position: 'right',

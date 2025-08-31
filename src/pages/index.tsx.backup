@@ -11,7 +11,7 @@ import styles from './index.module.css';
 const topPaddles = [
   {
     name: "JOOLA Ben Johns Perseus",
-    price: "$279.95+",
+    price: "$179.99",
     image: "/img/paddles/joola-ben-johns-perseus.jpg",
     rating: 4.8,
     power: 4.9,
@@ -23,7 +23,7 @@ const topPaddles = [
   },
   {
     name: "Six Zero Double Black Diamond",
-    price: "$180.00",
+    price: "$149.99",
     image: "/img/paddles/six-zero-double-black-diamond.png",
     rating: 4.7,
     power: 4.5,
@@ -35,7 +35,7 @@ const topPaddles = [
   },
   {
     name: "Vatic Pro Prism Flash",
-    price: "From $89.99",
+    price: "$89.99",
     image: "/img/paddles/vatic-pro-prism-flash.jpg",
     rating: 4.5,
     power: 4.3,
@@ -49,11 +49,11 @@ const topPaddles = [
 
 const categories = [
   { name: "Beginner Friendly", desc: "Easy-to-use paddles for new players", link: "/beginner-guide" },
-  { name: "Power Players", desc: "Maximum force for aggressive play", link: "/ultimate-guide" },
-  { name: "Control Masters", desc: "Precision and finesse focused", link: "/ultimate-guide" },
+  { name: "Power Players", desc: "Maximum force for aggressive play", link: "/ultimate-guide#power-paddles" },
+  { name: "Control Masters", desc: "Precision and finesse focused", link: "/ultimate-guide#control-paddles" },
   { name: "Under $100", desc: "Budget paddles that don't compromise", link: "/budget-paddles" },
   { name: "Premium Elite", desc: "Tournament-grade professional equipment", link: "/premium-comparison" },
-  { name: "Spin Specialists", desc: "Enhanced grip for advanced techniques", link: "/ultimate-guide" }
+  { name: "Spin Specialists", desc: "Enhanced grip for advanced techniques", link: "/ultimate-guide#spin-paddles" }
 ];
 
 function PaddleRatingBar({label, value}: {label: string, value: number}) {
@@ -143,9 +143,6 @@ function IntroSection() {
             <li>✅ <strong>Best prices</strong> from trusted retailers</li>
             <li>✅ <strong>Easy returns</strong> through established partners</li>
           </ul>
-          <div className={styles.priceDisclaimer}>
-            <p><em>*Prices subject to change. Some products may be available at discounted rates through promotional offers.</em></p>
-          </div>
         </div>
       </div>
     </section>

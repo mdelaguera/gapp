@@ -37,7 +37,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
   <p className="paddle-image-caption">JOOLA Ben Johns Perseus CFS - World #1 Player's Signature Paddle</p>
 </div>
 
-- **Price**: $209.96 (down from $279.95)
+- **Price**: $279.95+ (prices may vary)
 - **Perfect for**: Advanced players seeking tournament-grade performance
 - **Why we love it**: World #1 player's signature paddle with revolutionary Carbon-Flex5 technology
 - **[Check Current Price on Amazon →](https://amazon.com/dp/B0BQJ9XQYZ?tag=getapickle-20)**
@@ -51,7 +51,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
   <p className="paddle-image-caption">Six Zero Double Black Diamond - Premium Performance at Mid-Range Price</p>
 </div>
 
-- **Price**: $162-180
+- **Price**: $180.00
 - **Perfect for**: Players wanting premium performance without the premium price
 - **Why we love it**: Called "as close to perfect as any tested" by experts
 - **[Check Current Price at Six Zero →](https://sixzeropickleball.com/dbd?ref=getapickle)**
@@ -65,7 +65,7 @@ Pickleball isn't just growing - it's exploding. With the sport's market projecte
   <p className="paddle-image-caption">Vatic Pro Prism Flash - Premium Carbon Fiber at Beginner Price</p>
 </div>
 
-- **Price**: $99
+- **Price**: From $89.99 (with discounts)
 - **Perfect for**: New players wanting to grow with their equipment
 - **Why we love it**: Raw carbon fiber at a beginner-friendly price
 - **[Check Current Price at Vatic Pro →](https://vaticpro.com/prism-flash?affiliate=getapickle)**
@@ -126,8 +126,8 @@ Perfect for intermediate to advanced players (3.5+ rating) who want to elevate t
 *"I've been playing for 3 years and this paddle transformed my game. The control is incredible - I can place the ball exactly where I want it. Worth every penny."* - Sarah M., 4.0 player
 
 **Current Pricing:**
-- **Amazon**: $209.96 (33% off MSRP)
-- **Specialty Retailers**: $200-220 with promotional codes
+- **Amazon**: $279.95+ (prices subject to change)
+- **Specialty Retailers**: $279.95+ with promotional codes
 - **Best Deal**: Often bundled with premium grip and cover
 
 **[Get the JOOLA Perseus CFS on Amazon →](https://amazon.com/dp/B0BQJ9XQYZ?tag=getapickle-20)**
@@ -159,7 +159,7 @@ This isn't just marketing hype - the Double Black Diamond Control earned "Paddle
 Ideal for players rated 3.0 and above who want maximum performance per dollar. If you're upgrading from a basic paddle or want pro-level features without pro-level prices, this is your match.
 
 **Money-Saving Tip:**
-Use discount codes (often available) to get this paddle for $162 - making it an absolute steal for the performance level.
+Current pricing at $180.00 represents solid value for premium performance features.
 
 **[Check Six Zero Deals →](https://sixzeropickleball.com/dbd?ref=getapickle)**
 
@@ -172,7 +172,7 @@ Use discount codes (often available) to get this paddle for $162 - making it an 
 The CRBN Power Series represents the latest evolution in carbon fiber paddle technology, designed for players who demand maximum performance and durability.
 
 <div className="paddle-image-container">
-  <img src="/img/paddles/placeholder-paddle.svg" 
+  <img src="/img/paddles/crbn-power-series.jpg" 
        alt="CRBN Power Series Pickleball Paddle - Advanced Carbon Fiber" 
        className="paddle-image" />
   <p className="paddle-image-caption">CRBN Power Series - Advanced Carbon Fiber Technology</p>

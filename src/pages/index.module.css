@@ -72,6 +72,19 @@
   color: #2d3748;
 }
 
+.priceDisclaimer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.priceDisclaimer p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
 /* Top Picks Section */
 .topPicks {
   padding: 4rem 0;
