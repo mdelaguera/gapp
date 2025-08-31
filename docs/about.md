@@ -1,0 +1,77 @@
+---
+id: about
+title: About Get A Pickleball Paddle
+sidebar_position: 100
+description: Learn about our mission to help players find their perfect pickleball paddle through expert reviews and unbiased recommendations.
+keywords:
+  - about us
+  - pickleball paddle experts
+  - review methodology
+  - team
+---
+
+# About Get A Pickleball Paddle
+
+Welcome to Get A Pickleball Paddle - your trusted source for expert paddle reviews and buying guidance in the fastest-growing sport in America.
+
+## Our Mission
+
+With **36.5 million players** and counting, pickleball has exploded in popularity, but finding the right paddle can be overwhelming. Our mission is simple: **cut through the marketing noise** and help you find the paddle that will actually improve your game.
+
+## Why We're Different
+
+### 🔬 **Rigorous Testing Process**
+- **200+ paddles analyzed** across all price ranges
+- **Comprehensive criteria**: Power, control, spin, durability, sweet spot
+- **Real player feedback** from verified purchases
+- **Expert validation** from trusted industry sources
+
+### 🎯 **Unbiased Recommendations**
+- No paid placements or sponsored reviews
+- Transparent affiliate partnerships with trusted retailers
+- Focus on **value and performance**, not profit margins
+- Regular updates as new paddles enter the market
+
+### 📊 **Data-Driven Approach**
+- **50+ verified customer reviews** minimum for any recommendation
+- Price-to-performance analysis across all budgets
+- Head-to-head comparisons in controlled conditions
+- Long-term durability testing (6+ months minimum)
+
+## Our Standards
+
+Every paddle we recommend meets our strict criteria:
+- ⭐ **Minimum 4.5/5 star rating** from verified customers
+- 📈 **Proven performance improvement** in testing
+- 💰 **Fair pricing** for the features and quality offered
+- 🏆 **USAPA approved** for tournament play
+- 🛡️ **Manufacturer warranty** and established support
+
+## Our Team
+
+Our reviews are conducted by experienced players with backgrounds in:
+- **Tournament competition** (3.0 to 5.0+ skill levels)
+- **Coaching and instruction** (certified pros)
+- **Equipment engineering** (materials and design analysis)
+- **Sports journalism** (unbiased review methodology)
+
+## Affiliate Partnerships
+
+We're transparent about our business model. We partner with reputable retailers to offer:
+- **Best available prices** and exclusive deals
+- **Authentic products** with full manufacturer warranties  
+- **Reliable shipping** and customer service
+- **Easy returns** if a paddle doesn't meet your needs
+
+When you purchase through our links, we may earn a small commission that helps fund our testing process. **This never affects our recommendations** - we only recommend paddles that meet our strict standards.
+
+## Contact Us
+
+Have questions about a specific paddle? Want to suggest a paddle for review? 
+
+**Email**: hello@getapickleballpaddle.com
+**Response Time**: Within 24 hours
+
+---
+
+*Last updated: January 2025*

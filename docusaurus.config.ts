@@ -60,6 +60,10 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-3XE6YZV4HJ',
+          anonymizeIP: true,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -132,6 +136,40 @@ const config: Config = {
             {
               label: 'Budget vs Premium',
               to: '/budget-paddles',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'Contact Us',
+              to: '/contact',
+            },
+            {
+              label: 'About Us',
+              to: '/about',
+            },
+            {
+              label: 'Newsletter',
+              to: '/#newsletter',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'Twitter/X',
+              href: 'https://twitter.com/getpicklepaddle',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://facebook.com/getpicklepaddle',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://instagram.com/getpicklepaddle',
             },
           ],
         },

@@ -3,21 +3,382 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+/* Banner Section */
+.banner {
+  padding: 4rem 0 3rem 0;
   text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   position: relative;
+}
+
+.bannerContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bannerTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.bannerSubtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Intro Section */
+.intro {
+  padding: 4rem 0;
+  background: white;
+}
+
+.introContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.introContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+.introContent p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  text-align: left;
+}
+
+.benefits li {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  color: #2d3748;
+}
+
+/* Top Picks Section */
+.topPicks {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 3rem;
+}
+
+.paddleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.paddleCard {
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.paddleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-.buttons {
+.paddleImageContainer {
+  position: relative;
+  height: 200px;
+  background: #f8f9fa;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.paddleImage {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.paddleHighlight {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.paddleContent {
+  padding: 1.5rem;
+}
+
+.paddleName {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.paddlePrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.paddleRatings {
+  margin-bottom: 1.5rem;
+}
+
+.ratingBar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ratingLabel {
+  width: 70px;
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+.ratingBarContainer {
+  flex: 1;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.ratingBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.ratingValue {
+  width: 30px;
+  text-align: right;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.85rem;
+}
+
+.buyButton {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.buyButton:hover {
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+}
+
+/* Categories Section */
+.categories {
+  padding: 4rem 0;
+  background: white;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.categoryCard {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: inherit;
+}
+
+.categoryCard:hover {
+  background: #e9ecef;
+  border-color: #007bff;
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(-2px);
+}
+
+.categoryCard h3 {
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  font-size: 1.25rem;
+}
+
+.categoryCard p {
+  margin-bottom: 0;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* Social Proof Section */
+.socialProof {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.testimonials {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.testimonials blockquote {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.testimonials cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+}
+
+/* Newsletter Section */
+.newsletter {
+  padding: 4rem 0;
+  background: #2d3748;
+  color: white;
+}
+
+.newsletterContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.newsletterContent h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.newsletterContent p {
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.subscribeBtn {
+  padding: 12px 24px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  background: #218838;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .bannerTitle {
+    font-size: 2.5rem;
+  }
+  
+  .introContent h2 {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .benefits {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .newsletterForm {
+    flex-direction: column;
+  }
+  
+  .paddleGrid {
+    grid-template-columns: 1fr;
+  }
 }
