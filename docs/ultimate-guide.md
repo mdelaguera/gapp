@@ -165,29 +165,33 @@ Use discount codes (often available) to get this paddle for $162 - making it an 
 
 ---
 
-### 3. CRBN TruFoam Genesis Series ⭐⭐⭐⭐⭐
+### 3. CRBN Power Series ⭐⭐⭐⭐⭐
 
-**The Future of Pickleball Technology**
+**Advanced Carbon Fiber Engineering**
 
-CRBN spent 18 months and tested 200+ prototypes to create something completely new: a 100% foam core paddle that eliminates traditional honeycomb construction.
+The CRBN Power Series represents the latest evolution in carbon fiber paddle technology, designed for players who demand maximum performance and durability.
 
-**Game-Changing Innovation:**
-- **TruFoam Core**: Revolutionary construction that won't dead-en over time
-- **4 Shape Options**: Genesis 1-4 models for different playing styles
-- **Enhanced Dwell Time**: Foam core increases ball contact for better spin
-- **30-Day Risk-Free Trial**: Try it, love it, or return it
+<div className="paddle-image-container">
+  <img src="/img/paddles/placeholder-paddle.svg" 
+       alt="CRBN Power Series Pickleball Paddle - Advanced Carbon Fiber" 
+       className="paddle-image" />
+  <p className="paddle-image-caption">CRBN Power Series - Advanced Carbon Fiber Technology</p>
+</div>
 
-**Technical Advantages:**
-Traditional honeycomb cores can crush and lose performance. CRBN's foam core maintains consistent feel and performance for years, not months.
+**Key Features:**
+- **Advanced Carbon Fiber Surface**: Superior spin and power generation  
+- **Polypropylene Honeycomb Core**: Consistent performance and durability
+- **Multiple Models**: CRBN1X, CRBN2X, CRBN3X for different preferences
+- **Thermoformed Construction**: Enhanced strength and reduced vibration
 
 **Performance Analysis:**
-- **Durability**: 10/10 - Foam won't crush like honeycomb
-- **Spin**: 9/10 - Exceptional grip on the ball
-- **Feel**: 9/10 - Unique, plush sensation
-- **Innovation**: 10/10 - Genuinely revolutionary technology
+- **Power**: 9/10 - Excellent drive power and pace
+- **Control**: 8/10 - Good precision for aggressive play
+- **Spin**: 9/10 - Carbon fiber surface grips the ball well
+- **Durability**: 9/10 - Built to withstand intensive play
 
 **Investment Consideration:**
-At $279.99, this is expensive. But if you play frequently and want equipment that maintains peak performance for years, the cost per game becomes reasonable.
+At $229.99, the CRBN Power Series offers professional-level features at a competitive price point for serious players.
 
 **Which Genesis Model?**
 - **Genesis 1**: Elongated with long handle (power players)
@@ -202,7 +206,7 @@ At $279.99, this is expensive. But if you play frequently and want equipment tha
 ## Paddle Selection by Playing Style
 
 ### Power Players
-- **CRBN TruFoam Genesis 1** - Maximum power with long handle
+- **CRBN1X Power Series 16mm** - Maximum power with long handle
 - **Selkirk VANGUARD Power Air Epic** - Engineered for aggressive play
 - **JOOLA Ben Johns Perseus CFS 14mm** - Pro power with control
 
@@ -232,7 +236,7 @@ At $279.99, this is expensive. But if you play frequently and want equipment tha
 
 ### $200+
 - **JOOLA Ben Johns Perseus CFS** ($209) - Pro-level performance
-- **CRBN TruFoam Genesis** ($280) - Revolutionary technology
+- **CRBN1X Power Series** ($229) - Latest carbon fiber technology
 - **Selkirk VANGUARD Epic** ($249) - Advanced engineering
 
 ---
