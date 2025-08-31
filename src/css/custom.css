@@ -13,25 +13,59 @@
 }
 
 .container {
-  max-width: 1200px !important;
+  max-width: 1400px !important;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Make docs content use full width */
+/* Make docs content use full width with better readability */
 .docMainContainer_gTbr {
   max-width: none !important;
 }
 
 .docItemContainer_Djhp {
-  max-width: 1200px !important;
+  max-width: 1000px !important;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Improve content readability */
+.markdown h1, .markdown h2, .markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.markdown p {
+  margin-bottom: 1.2rem;
+}
+
+.markdown ul, .markdown ol {
+  margin-bottom: 1.2rem;
+  padding-left: 2rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+    padding: 0 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
   .docItemContainer_Djhp {
     padding: 0 1rem;
+    font-size: 1rem;
   }
 }
 

@@ -200,21 +200,48 @@
   font-size: 0.85rem;
 }
 
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.viewButton {
+  flex: 1;
+  padding: 10px 16px;
+  background: #f8f9fa;
+  border: 2px solid #dee2e6;
+  color: #495057;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.viewButton:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  color: #495057;
+  text-decoration: none;
+}
+
 .buyButton {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  background: #007bff;
+  flex: 1;
+  padding: 10px 16px;
+  background: #28a745;
   color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
   text-align: center;
   transition: background-color 0.2s ease;
+  font-size: 0.9rem;
 }
 
 .buyButton:hover {
-  background: #0056b3;
+  background: #218838;
   color: white;
   text-decoration: none;
 }

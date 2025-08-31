@@ -18,7 +18,7 @@ const topPaddles = [
     control: 4.7,
     spin: 4.8,
     durability: 4.6,
-    link: "https://joola.com/products/ben-johns-perseus-pickleball-paddle",
+    slug: "joola-ben-johns-perseus",
     highlight: "Pro's Choice"
   },
   {
@@ -30,20 +30,8 @@ const topPaddles = [
     control: 4.8,
     spin: 4.6,
     durability: 4.9,
-    link: "https://www.sixzeropickleball.com/products/double-black-diamond-control",
+    slug: "six-zero-double-black-diamond",
     highlight: "Best Value"
-  },
-  {
-    name: "Selkirk Vanguard Power Air",
-    price: "$199.99",
-    image: "/img/paddles/placeholder-paddle.svg",
-    rating: 4.6,
-    power: 4.9,
-    control: 4.4,
-    spin: 4.5,
-    durability: 4.7,
-    link: "https://www.selkirk.com/products/vanguard-power-air-pickleball-paddle",
-    highlight: "Power Beast"
   },
   {
     name: "Vatic Pro Prism Flash",
@@ -54,7 +42,7 @@ const topPaddles = [
     control: 4.6,
     spin: 4.7,
     durability: 4.4,
-    link: "https://vaticpro.com/products/prism-flash",
+    slug: "vatic-pro-prism-flash",
     highlight: "Budget King"
   }
 ];
@@ -99,14 +87,22 @@ function PaddleCard({paddle}: {paddle: typeof topPaddles[0]}) {
           <PaddleRatingBar label="Spin" value={paddle.spin} />
           <PaddleRatingBar label="Durability" value={paddle.durability} />
         </div>
-        <a 
-          href={paddle.link} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className={styles.buyButton}
-        >
-          View Paddle →
-        </a>
+        <div className={styles.buttonGroup}>
+          <Link 
+            to={`/paddles/${paddle.slug}`}
+            className={styles.viewButton}
+          >
+            View Review
+          </Link>
+          <a 
+            href="https://amazon.com/pickleball-paddles"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.buyButton}
+          >
+            Buy Now →
+          </a>
+        </div>
       </div>
     </div>
   );
