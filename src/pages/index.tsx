@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import { OrganizationSchema } from '../components/StructuredData';
 
 import styles from './index.module.css';
 
@@ -48,12 +49,12 @@ const topPaddles = [
 ];
 
 const categories = [
-  { name: "Beginner Friendly", desc: "Easy-to-use paddles for new players", link: "/beginner-guide" },
-  { name: "Power Players", desc: "Maximum force for aggressive play", link: "/ultimate-guide" },
-  { name: "Control Masters", desc: "Precision and finesse focused", link: "/ultimate-guide" },
-  { name: "Under $100", desc: "Budget paddles that don't compromise", link: "/budget-paddles" },
-  { name: "Premium Elite", desc: "Tournament-grade professional equipment", link: "/premium-comparison" },
-  { name: "Spin Specialists", desc: "Enhanced grip for advanced techniques", link: "/ultimate-guide" }
+  { name: "Beginner Friendly", desc: "Easy-to-use paddles for new players starting out", link: "/beginner-guide" },
+  { name: "Power Players", desc: "Maximum force for aggressive baseline play", link: "/ultimate-guide" },
+  { name: "Control Masters", desc: "Precision and finesse focused tournament paddles", link: "/ultimate-guide" },
+  { name: "Under $100", desc: "Budget carbon fiber paddles that don't compromise", link: "/budget-paddles" },
+  { name: "Premium Elite", desc: "Tournament-grade professional equipment reviews", link: "/premium-comparison" },
+  { name: "Spin Specialists", desc: "Raw carbon fiber paddles for advanced spin", link: "/ultimate-guide" }
 ];
 
 function PaddleRatingBar({label, value}: {label: string, value: number}) {
@@ -114,10 +115,10 @@ function HomepageBanner() {
       <div className="container">
         <div className={styles.bannerContent}>
           <Heading as="h1" className={styles.bannerTitle}>
-            Find Your Perfect Pickleball Paddle
+            Best Pickleball Paddles 2025 - Expert Reviews & Buying Guide
           </Heading>
           <p className={styles.bannerSubtitle}>
-            Skip the endless research. Get expert-curated paddle recommendations tailored to your play style, skill level, and budget.
+            Skip the endless research. Get expert-curated pickleball paddle recommendations tailored to your play style, skill level, and budget from our analysis of 200+ tournament-approved paddles.
           </p>
         </div>
       </div>
@@ -133,9 +134,9 @@ function IntroSection() {
           <h2>Why Spend Hours Searching When We've Done the Work?</h2>
           <p>
             With <strong>200+ paddles tested</strong> and <strong>thousands of reviews analyzed</strong>, 
-            we've simplified your paddle search to what actually matters: finding the right paddle 
-            for YOUR game. No marketing fluff, no endless comparisons—just the paddles that 
-            perform where it counts.
+            we've simplified your pickleball paddle search to what actually matters: finding the right carbon fiber, 
+            polymer core, or composite paddle for YOUR game. No marketing fluff, no endless comparisons—just 
+            USAPA-approved tournament paddles that perform where it counts.
           </p>
           <ul className={styles.benefits}>
             <li>✅ <strong>Save 10+ hours</strong> of research time</li>
@@ -235,8 +236,18 @@ function NewsletterSection() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Best Pickleball Paddles 2025 - Expert Reviews & Buying Guide"
-      description="Find the perfect pickleball paddle with our expert reviews and comprehensive buying guides. Compare top paddles from JOOLA, Six Zero, Vatic Pro and more. Updated for 2025.">
+      title="Best Pickleball Paddles 2025 | Expert Reviews & Buying Guide | 200+ Tested"
+      description="Find your perfect pickleball paddle with our expert reviews of 200+ tested paddles. Compare JOOLA, Six Zero, Vatic Pro & more. Updated 2025 buying guide.">
+      <OrganizationSchema 
+        name="Get A Pickleball Paddle"
+        url="https://getapickleballpaddle.com"
+        description="Expert pickleball paddle reviews and buying guides with analysis of 200+ tested paddles"
+        sameAs={[
+          "https://twitter.com/getpicklepaddle",
+          "https://facebook.com/getpicklepaddle",
+          "https://instagram.com/getpicklepaddle"
+        ]}
+      />
       <main>
         <HomepageBanner />
         <IntroSection />

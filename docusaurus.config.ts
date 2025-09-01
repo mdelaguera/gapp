@@ -29,11 +29,13 @@ const config: Config = {
   // Custom fields for SEO metadata
   customFields: {
     metadata: [
-      {name: 'keywords', content: 'pickleball paddles, paddle reviews, best pickleball paddles 2025, beginner paddles, premium paddles'},
-      {name: 'description', content: 'Expert reviews and buying guides for the best pickleball paddles in 2025. Find your perfect paddle with our comprehensive comparisons and affiliate recommendations.'},
-      {name: 'author', content: 'Paddle Experts'},
+      {name: 'keywords', content: 'pickleball paddles, paddle reviews, best pickleball paddles 2025, JOOLA Ben Johns, Six Zero Double Black Diamond, Vatic Pro, carbon fiber paddles, polymer core, USAPA approved, tournament paddles, beginner paddles, premium paddles, paddle comparison, buying guide'},
+      {name: 'description', content: 'Expert reviews of 200+ tested pickleball paddles in 2025. Find your perfect JOOLA, Six Zero, or Vatic Pro paddle with our comprehensive comparisons and affiliate recommendations.'},
+      {name: 'author', content: 'Get A Pickleball Paddle Expert Team'},
       {property: 'og:type', content: 'website'},
       {property: 'og:site_name', content: 'Get A Pickleball Paddle'},
+      {property: 'og:title', content: 'Best Pickleball Paddles 2025 | Expert Reviews & Buying Guide'},
+      {property: 'og:description', content: 'Find your perfect pickleball paddle with our expert reviews of 200+ tested paddles. Compare JOOLA, Six Zero, Vatic Pro & more.'},
     ],
   },
 
