@@ -4,7 +4,7 @@ title: Six Zero Double Black Diamond Review - Best Value Carbon Fiber Paddle 202
 sidebar_label: Six Zero DBD Review
 sidebar_position: 11
 description: Complete Six Zero Double Black Diamond review - exceptional value T700 raw carbon fiber paddle with lifetime warranty. Premium performance at $180 with expert analysis and buying guide.
-slug: paddles/six-zero-double-black-diamond
+slug: /paddles/six-zero-double-black-diamond
 keywords:
   - Six Zero Double Black Diamond review
   - best value pickleball paddle 2025

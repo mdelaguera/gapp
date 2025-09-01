@@ -4,7 +4,7 @@ title: Vatic Pro Prism Flash Review - Best Budget Carbon Fiber Paddle Under $100
 sidebar_label: Vatic Pro Flash Review
 sidebar_position: 12
 description: Complete Vatic Pro Prism Flash review - best budget raw carbon fiber paddle under $100. California-made premium technology at unbeatable price. Expert analysis and buying guide.
-slug: paddles/vatic-pro-prism-flash
+slug: /paddles/vatic-pro-prism-flash
 keywords:
   - Vatic Pro Prism Flash review
   - best budget pickleball paddle 2025

@@ -4,7 +4,7 @@ title: JOOLA Ben Johns Perseus Review - World #1's Signature Paddle 2025
 sidebar_label: JOOLA Perseus Review
 sidebar_position: 10
 description: Complete review of the JOOLA Ben Johns Perseus pickleball paddle. World #1's signature carbon fiber paddle with exceptional control, power, and spin generation. Expert analysis and buying guide.
-slug: paddles/joola-ben-johns-perseus
+slug: /paddles/joola-ben-johns-perseus
 keywords:
   - JOOLA Ben Johns Perseus review
   - Ben Johns signature paddle
