@@ -6,15 +6,28 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://next-mdx-blog.vercel.app'),
+  metadataBase: new URL('https://getapickleballpaddle.com'),
   alternates: {
     canonical: '/'
   },
   title: {
-    default: 'John Smith',
-    template: '%s | John Smith'
+    default: 'Get A Pickleball Paddle - Best Paddle Reviews & Buying Guide 2025',
+    template: '%s | Get A Pickleball Paddle'
   },
-  description: 'My portfolio, blog, and personal website.'
+  description: 'Expert pickleball paddle reviews and buying guides. Find your perfect paddle with our analysis of 200+ tested paddles. JOOLA, Six Zero, Vatic Pro & more.',
+  keywords: ['pickleball paddles', 'paddle reviews', 'best pickleball paddles 2025', 'buying guide', 'JOOLA', 'Six Zero', 'Vatic Pro'],
+  openGraph: {
+    title: 'Get A Pickleball Paddle - Best Paddle Reviews 2025',
+    description: 'Expert pickleball paddle reviews and buying guides. Find your perfect paddle with our analysis of 200+ tested paddles.',
+    url: 'https://getapickleballpaddle.com',
+    siteName: 'Get A Pickleball Paddle',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Get A Pickleball Paddle - Best Paddle Reviews 2025',
+    description: 'Expert pickleball paddle reviews and buying guides. Find your perfect paddle with our analysis of 200+ tested paddles.'
+  }
 };
 
 export default function RootLayout({
@@ -39,10 +52,10 @@ export default function RootLayout({
 
 function Footer() {
   const links = [
-    { name: '@johnsmith', url: 'https://x.com/johnsmith' },
-    { name: 'youtube', url: 'https://www.youtube.com/@johnsmith' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/johnsmith' },
-    { name: 'github', url: 'https://github.com/johnsmith' }
+    { name: 'about', url: '/about' },
+    { name: 'contact', url: '/contact' },
+    { name: 'affiliate disclosure', url: '/affiliate-disclosure' },
+    { name: 'privacy policy', url: '/privacy' }
   ];
 
   return (

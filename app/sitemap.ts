@@ -1,38 +1,26 @@
-import { promises as fs } from 'fs';
-import path from 'path';
-
-const SITE_URL = 'https://next-mdx-blog.vercel.app';
-
-async function getNoteSlugs(dir: string) {
-  const entries = await fs.readdir(dir, {
-    recursive: true,
-    withFileTypes: true
-  });
-  return entries
-    .filter((entry) => entry.isFile() && entry.name === 'page.mdx')
-    .map((entry) => {
-      const relativePath = path.relative(
-        dir,
-        path.join(entry.parentPath, entry.name)
-      );
-      return path.dirname(relativePath);
-    })
-    .map((slug) => slug.replace(/\\/g, '/'));
-}
+const SITE_URL = 'https://getapickleballpaddle.com';
 
 export default async function sitemap() {
-  const notesDirectory = path.join(process.cwd(), 'app', 'n');
-  const slugs = await getNoteSlugs(notesDirectory);
-
-  const notes = slugs.map((slug) => ({
-    url: `${SITE_URL}/n/${slug}`,
-    lastModified: new Date().toISOString()
-  }));
-
-  const routes = ['', '/work'].map((route) => ({
+  // Define static routes
+  const routes = [
+    '',
+    '/joola-ben-johns-perseus',
+    '/six-zero-double-black-diamond', 
+    '/vatic-pro-prism-flash',
+    '/ultimate-guide',
+    '/beginner-guide',
+    '/budget-paddles',
+    '/premium-comparison',
+    '/about',
+    '/contact',
+    '/affiliate-disclosure',
+    '/privacy'
+  ].map((route) => ({
     url: `${SITE_URL}${route}`,
-    lastModified: new Date().toISOString()
+    lastModified: new Date().toISOString(),
+    changeFrequency: route === '' ? 'weekly' : 'monthly',
+    priority: route === '' ? 1.0 : route.includes('joola-ben-johns-perseus') || route.includes('six-zero-double-black-diamond') || route.includes('vatic-pro-prism-flash') ? 0.8 : 0.6
   }));
 
-  return [...routes, ...notes];
+  return routes;
 }
