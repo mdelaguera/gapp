@@ -9,23 +9,44 @@ type ListItemProps = ComponentPropsWithoutRef<'li'>;
 type AnchorProps = ComponentPropsWithoutRef<'a'>;
 type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 
+// Helper function to generate heading IDs
+const generateHeadingId = (children: React.ReactNode): string => {
+  const text = typeof children === 'string' ? children : 
+    React.Children.toArray(children).join('');
+  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+};
+
 const components = {
-  h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0" {...props} />
-  ),
-  h2: (props: HeadingProps) => (
-    <h2
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
-      {...props}
-    />
-  ),
-  h3: (props: HeadingProps) => (
-    <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
-      {...props}
-    />
-  ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
+  h1: (props: HeadingProps) => {
+    const id = props.id || (props.children ? generateHeadingId(props.children) : '');
+    return (
+      <h1 className="font-medium pt-12 mb-0" {...props} id={id} />
+    );
+  },
+  h2: (props: HeadingProps) => {
+    const id = props.id || (props.children ? generateHeadingId(props.children) : '');
+    return (
+      <h2
+        className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+        {...props}
+        id={id}
+      />
+    );
+  },
+  h3: (props: HeadingProps) => {
+    const id = props.id || (props.children ? generateHeadingId(props.children) : '');
+    return (
+      <h3
+        className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+        {...props}
+        id={id}
+      />
+    );
+  },
+  h4: (props: HeadingProps) => {
+    const id = props.id || (props.children ? generateHeadingId(props.children) : '');
+    return <h4 className="font-medium" {...props} id={id} />;
+  },
   p: (props: ParagraphProps) => (
     <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
   ),
