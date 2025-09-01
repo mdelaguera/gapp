@@ -80,9 +80,10 @@ function Header() {
           <span className="sm:hidden">GAPP</span>
         </a>
         <nav className="hidden md:flex space-x-4 text-sm">
-          <a href="/ultimate-guide" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Reviews</a>
-          <a href="/beginner-guide" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Beginner</a>
-          <a href="/budget-paddles" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Budget</a>
+          <a href="/ultimate-guide" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Ultimate Guide</a>
+          <a href="/beginner-guide" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Beginner Guide</a>
+          <a href="/budget-paddles" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">Budget Paddles</a>
+          <a href="/about" className="text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors">About</a>
         </nav>
       </div>
     </header>
