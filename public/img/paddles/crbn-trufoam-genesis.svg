@@ -1,0 +1,47 @@
+<svg width="250" height="400" viewBox="0 0 250 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="250" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Paddle Outline -->
+  <rect x="25" y="50" width="200" height="280" rx="100" ry="100" fill="#0a0a0a" stroke="#222" stroke-width="3"/>
+  
+  <!-- Handle -->
+  <rect x="100" y="330" width="50" height="60" rx="5" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  
+  <!-- Brand Logo Area -->
+  <rect x="50" y="80" width="150" height="35" rx="5" fill="#ff6b35" opacity="0.95"/>
+  <text x="125" y="103" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="20">CRBN</text>
+  
+  <!-- Model Text -->
+  <text x="125" y="140" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="12">TRUFOAM</text>
+  <text x="125" y="160" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-weight="bold" font-size="16">GENESIS</text>
+  
+  <!-- Foam Core Visualization -->
+  <defs>
+    <pattern id="foamPattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="7.5" cy="7.5" r="2" fill="#444" opacity="0.4"/>
+      <circle cx="7.5" cy="7.5" r="4" fill="none" stroke="#666" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect x="45" y="180" width="160" height="120" fill="url(#foamPattern)" opacity="0.7"/>
+  
+  <!-- Carbon Fiber Texture Lines -->
+  <g stroke="#333" stroke-width="0.5" opacity="0.3">
+    <line x1="60" y1="200" x2="190" y2="200"/>
+    <line x1="60" y1="220" x2="190" y2="220"/>
+    <line x1="60" y1="240" x2="190" y2="240"/>
+    <line x1="60" y1="260" x2="190" y2="260"/>
+    <line x1="60" y1="280" x2="190" y2="280"/>
+  </g>
+  
+  <!-- Innovation Badge -->
+  <circle cx="80" cy="120" r="25" fill="#ff6b35" stroke="#fff" stroke-width="2"/>
+  <text x="80" y="115" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">100%</text>
+  <text x="80" y="125" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">FOAM</text>
+  
+  <!-- Weight Indicator -->
+  <text x="125" y="320" text-anchor="middle" fill="#bbb" font-family="Arial, sans-serif" font-size="10">Varies by Model</text>
+  
+  <!-- Price -->
+  <text x="125" y="355" text-anchor="middle" fill="#ff6b35" font-family="Arial, sans-serif" font-weight="bold" font-size="12">$279.99</text>
+</svg>

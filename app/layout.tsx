@@ -38,8 +38,12 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico'
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png'
   }
 };
 
@@ -72,39 +76,48 @@ export default function RootLayout({
 function PaddleIcon() {
   return (
     <svg 
-      width="28" 
-      height="28" 
+      width="32" 
+      height="32" 
       viewBox="0 0 40 40" 
       fill="none" 
-      className="inline-block mr-2"
+      className="inline-block mr-3"
       xmlns="http://www.w3.org/2000/svg"
     >
+      {/* Background circle for better visibility */}
+      <circle cx="20" cy="18" r="18" fill="#28a745" opacity="0.1"/>
+      
       {/* Paddle face - distinctive pickleball paddle shape */}
       <path 
         d="M20 4C25 4 28 7 28 12V24C28 29 25 32 20 32C15 32 12 29 12 24V12C12 7 15 4 20 4Z" 
-        fill="#2d3748"
-        stroke="#4a5568"
-        strokeWidth="1"
+        fill="#28a745"
+        stroke="#1e7e34"
+        strokeWidth="2"
       />
+      
       {/* Handle */}
       <rect 
         x="17" 
         y="32" 
         width="6" 
         height="4" 
-        fill="#2d3748" 
+        fill="#1e7e34" 
         rx="3"
       />
+      
       {/* Surface texture lines for realism */}
-      <line x1="16" y1="10" x2="24" y2="10" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="15" y1="13" x2="25" y2="13" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="15" y1="16" x2="25" y2="16" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="15" y1="19" x2="25" y2="19" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="15" y1="22" x2="25" y2="22" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="15" y1="25" x2="25" y2="25" stroke="white" strokeWidth="0.5" opacity="0.3"/>
-      <line x1="16" y1="28" x2="24" y2="28" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="16" y1="10" x2="24" y2="10" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="15" y1="13" x2="25" y2="13" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="15" y1="16" x2="25" y2="16" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="15" y1="19" x2="25" y2="19" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="15" y1="22" x2="25" y2="22" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="15" y1="25" x2="25" y2="25" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="16" y1="28" x2="24" y2="28" stroke="white" strokeWidth="0.8" opacity="0.7"/>
+      
       {/* Sweet spot indicator */}
-      <circle cx="20" cy="18" r="4" fill="none" stroke="white" strokeWidth="0.8" opacity="0.4"/>
+      <circle cx="20" cy="18" r="4" fill="none" stroke="white" strokeWidth="1.2" opacity="0.8"/>
+      
+      {/* Brand text */}
+      <text x="20" y="19" fontSize="4" fill="white" textAnchor="middle" opacity="0.9">P</text>
     </svg>
   );
 }

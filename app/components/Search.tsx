@@ -4,12 +4,10 @@ import { useState, useEffect, useRef } from 'react';
 import { algoliasearch } from 'algoliasearch';
 import Link from 'next/link';
 
-const searchClient = algoliasearch(
+const client = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID || '02AH4INZGM',
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY || 'aa414ecd747f987b896d2041ccafe33b'
 );
-
-const index = searchClient.initIndex('paddle_reviews');
 
 interface SearchHit {
   objectID: string;
@@ -44,10 +42,14 @@ export default function Search() {
       if (query.length > 2) {
         setIsLoading(true);
         try {
-          const { hits } = await index.search(query, {
-            hitsPerPage: 8,
-            attributesToHighlight: ['title', 'content'],
-            attributesToSnippet: ['content:30'],
+          const { hits } = await client.searchSingleIndex({
+            indexName: 'paddle_reviews',
+            searchParams: {
+              query: query,
+              hitsPerPage: 8,
+              attributesToHighlight: ['title', 'content'],
+              attributesToSnippet: ['content:30'],
+            }
           });
           setResults(hits as SearchHit[]);
           setIsOpen(true);
