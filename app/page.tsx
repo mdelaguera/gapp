@@ -95,16 +95,8 @@ function PaddleCard({paddle}: {paddle: typeof topPaddles[0]}) {
             href={`/${paddle.slug}`}
             className="view-button"
           >
-            View Review
+            See Review
           </Link>
-          <a 
-            href="https://amazon.com/pickleball-paddles"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="buy-button"
-          >
-            Buy Now →
-          </a>
         </div>
       </div>
     </div>

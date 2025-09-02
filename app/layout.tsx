@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import TableOfContents from './components/TableOfContents';
+import Search from './components/Search';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -50,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className}`}>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className="antialiased">
@@ -70,18 +72,39 @@ export default function RootLayout({
 function PaddleIcon() {
   return (
     <svg 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
+      width="28" 
+      height="28" 
+      viewBox="0 0 40 40" 
       fill="none" 
       className="inline-block mr-2"
       xmlns="http://www.w3.org/2000/svg"
     >
+      {/* Paddle face - distinctive pickleball paddle shape */}
       <path 
-        d="M12 2C10.5 2 9.5 3 9.5 4.5V6H8C6.5 6 5.5 7 5.5 8.5V19.5C5.5 21 6.5 22 8 22H16C17.5 22 18.5 21 18.5 19.5V8.5C18.5 7 17.5 6 16 6H14.5V4.5C14.5 3 13.5 2 12 2Z" 
-        fill="currentColor"
+        d="M20 4C25 4 28 7 28 12V24C28 29 25 32 20 32C15 32 12 29 12 24V12C12 7 15 4 20 4Z" 
+        fill="#2d3748"
+        stroke="#4a5568"
+        strokeWidth="1"
       />
-      <circle cx="12" cy="14" r="3" fill="white" fillOpacity="0.3"/>
+      {/* Handle */}
+      <rect 
+        x="17" 
+        y="32" 
+        width="6" 
+        height="4" 
+        fill="#2d3748" 
+        rx="3"
+      />
+      {/* Surface texture lines for realism */}
+      <line x1="16" y1="10" x2="24" y2="10" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="15" y1="13" x2="25" y2="13" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="15" y1="16" x2="25" y2="16" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="15" y1="19" x2="25" y2="19" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="15" y1="22" x2="25" y2="22" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="15" y1="25" x2="25" y2="25" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="16" y1="28" x2="24" y2="28" stroke="white" strokeWidth="0.5" opacity="0.3"/>
+      {/* Sweet spot indicator */}
+      <circle cx="20" cy="18" r="4" fill="none" stroke="white" strokeWidth="0.8" opacity="0.4"/>
     </svg>
   );
 }
@@ -104,7 +127,9 @@ function Header() {
             <a href="/premium-comparison" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Premium Paddles</a>
           </div>
           <div className="navbar__items navbar__items--right">
-            <a href="/ultimate-guide?search=true" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>🔍 Search</a>
+            <div className="navbar__item">
+              <Search />
+            </div>
             <a href="/affiliate-disclosure" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Disclosure</a>
           </div>
         </nav>
