@@ -122,6 +122,39 @@ function PaddleIcon() {
   );
 }
 
+function TwitterIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+  );
+}
+
+function InstagramIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348zm7.718 0c-1.297 0-2.348-1.051-2.348-2.348s1.051-2.348 2.348-2.348 2.348 1.051 2.348 2.348-1.051 2.348-2.348 2.348z"/>
+      <path d="M7.03 5.836h9.94c1.208 0 2.194.986 2.194 2.194v7.94c0 1.208-.986 2.194-2.194 2.194H7.03c-1.208 0-2.194-.986-2.194-2.194V8.03c0-1.208.986-2.194 2.194-2.194z"/>
+    </svg>
+  );
+}
+
+function YouTubeIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+  );
+}
+
 function Header() {
   return (
     <header className="navbar navbar--fixed-top" style={{ backgroundColor: 'white', borderBottom: '1px solid #e9ecef' }}>
@@ -196,18 +229,58 @@ function Footer() {
             </ul>
           </div>
           <div className="col footer__col">
-            <h4 className="footer__title">Social</h4>
-            <ul className="footer__items clean-list">
-              <li className="footer__item">
-                <a href="https://twitter.com/getpicklepaddle" className="footer__link-item" style={{ color: '#e2e8f0', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">Twitter/X</a>
-              </li>
-              <li className="footer__item">
-                <a href="https://facebook.com/getpicklepaddle" className="footer__link-item" style={{ color: '#e2e8f0', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">Facebook</a>
-              </li>
-              <li className="footer__item">
-                <a href="https://instagram.com/getpicklepaddle" className="footer__link-item" style={{ color: '#e2e8f0', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">Instagram</a>
-              </li>
-            </ul>
+            <h4 className="footer__title">Newsletter</h4>
+            <p style={{ color: '#a0aec0', fontSize: '0.9rem', marginBottom: '1rem' }}>
+              Get the latest paddle reviews and buying guides delivered to your inbox.
+            </p>
+            <form className="newsletter-signup" style={{ marginBottom: '1.5rem' }}>
+              <div style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column' }}>
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  required
+                  style={{
+                    padding: '10px 12px',
+                    borderRadius: '4px',
+                    border: '1px solid #4a5568',
+                    backgroundColor: '#374151',
+                    color: 'white',
+                    fontSize: '0.9rem'
+                  }}
+                />
+                <button 
+                  type="submit"
+                  style={{
+                    padding: '10px 16px',
+                    backgroundColor: '#28a745',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '4px',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    fontSize: '0.9rem'
+                  }}
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+            
+            <h4 className="footer__title" style={{ fontSize: '1rem', marginTop: '1.5rem' }}>Follow Us</h4>
+            <div className="social-icons">
+              <a href="https://twitter.com/getpicklepaddle" target="_blank" rel="noopener noreferrer" style={{ color: '#e2e8f0' }} title="Follow us on Twitter/X">
+                <TwitterIcon />
+              </a>
+              <a href="https://facebook.com/getpicklepaddle" target="_blank" rel="noopener noreferrer" style={{ color: '#e2e8f0' }} title="Like us on Facebook">
+                <FacebookIcon />
+              </a>
+              <a href="https://instagram.com/getpicklepaddle" target="_blank" rel="noopener noreferrer" style={{ color: '#e2e8f0' }} title="Follow us on Instagram">
+                <InstagramIcon />
+              </a>
+              <a href="https://youtube.com/@getpicklepaddle" target="_blank" rel="noopener noreferrer" style={{ color: '#e2e8f0' }} title="Subscribe to our YouTube channel">
+                <YouTubeIcon />
+              </a>
+            </div>
           </div>
           <div className="col footer__col">
             <h4 className="footer__title">Legal</h4>
