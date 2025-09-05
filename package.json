@@ -1,42 +1,31 @@
 {
-  "name": "gapp-live",
-  "description": "Next.js + Sanity: A Powerful Website Starter with Real-time Visual Editing",
-  "keywords": [
-    "Sanity",
-    "Next.js",
-    "Headless CMS",
-    "Visual Editing",
-    "Live Content API (LCAPI)",
-    "Real-time"
-  ],
-  "homepage": "https://github.com/sanity-io/sanity-template-nextjs-clean#readme",
-  "bugs": {
-    "url": "https://github.com/sanity-io/sanity-template-nextjs-clean/issues"
-  },
-  "workspaces": [
-    "studio",
-    "frontend"
-  ],
+  "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel --print-label dev:*",
-    "dev:next": "npm run dev --workspace=frontend",
-    "dev:studio": "npm run dev --workspace=studio",
-    "format": "prettier --cache --write .",
-    "import-sample-data": "cd studio && sanity dataset import sample-data.tar.gz --replace",
-    "lint": "npm run lint --workspace=frontend",
-    "type-check": "npm run type-check --workspaces"
-  },
-  "prettier": "@sanity/prettier-config",
-  "devDependencies": {
-    "@sanity/prettier-config": "^2.0.1",
-    "npm-run-all2": "^5.0.2",
-    "prettier": "^3.6.2"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@sanity/cli": "^4.6.1",
-    "@sanity/client": "^7.11.0",
-    "@sanity/image-url": "^1.2.0",
-    "next-sanity": "^10.0.16",
-    "next-seo": "^6.8.0"
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "15.3.3",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/mdx": "^2.0.13",
+    "@vercel/analytics": "^1.5.0",
+    "algoliasearch": "^5.36.0",
+    "framer-motion": "^12.16.0",
+    "next": "15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-instantsearch": "^7.16.2",
+    "sugar-high": "^0.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.8.3"
   }
 }
