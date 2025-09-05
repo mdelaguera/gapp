@@ -39,81 +39,121 @@ export default function Search() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Algolia search
+  // Search functionality with Algolia fallback
   useEffect(() => {
     const timeoutId = setTimeout(async () => {
       if (query.length > 2) {
         setIsLoading(true);
         
+        // Always use local search for now until Algolia is properly configured
+        // TODO: Re-enable Algolia when index is created and properly configured
         try {
-          if (client) {
-            const searchResult = await client.searchSingleIndex({
-              indexName: 'pages', // You might need to adjust this index name
-              searchParams: {
-                query: query,
-                hitsPerPage: 10
-              }
-            });
-            
-            const hits = searchResult.hits as SearchHit[];
-            setResults(hits);
-            setIsOpen(true);
-          } else {
-            // Fallback to local search if Algolia client not available
-            throw new Error('Algolia client not initialized');
-          }
+          // Temporarily disable Algolia search
+          // if (client) {
+          //   const searchResult = await client.searchSingleIndex({
+          //     indexName: 'pages',
+          //     searchParams: {
+          //       query: query,
+          //       hitsPerPage: 10
+          //     }
+          //   });
+          //   
+          //   const hits = searchResult.hits as SearchHit[];
+          //   setResults(hits);
+          //   setIsOpen(true);
+          // } else {
+          //   throw new Error('Algolia client not initialized');
+          // }
+          
+          // Use local search as primary option for now
+          throw new Error('Using local search by design');
         } catch (error) {
-          console.error('Search error:', error);
-          // Fallback to local search
+          console.log('Using local search fallback');
+          // Local search implementation
           const searchData = [
             {
               objectID: '1',
               title: 'JOOLA Ben Johns Perseus CFS',
-              content: 'Professional tournament paddle with Carbon-Flex5 technology',
+              content: 'Professional tournament paddle with Carbon-Flex5 technology and raw carbon fiber surface',
               path: '/joola-ben-johns-perseus',
               type: 'Paddle Review'
             },
             {
               objectID: '2',
-              title: 'Six Zero Double Black Diamond',
-              content: 'Premium T700 carbon fiber paddle with lifetime warranty',
-              path: '/six-zero-double-black-diamond',
+              title: 'JOOLA Ben Johns Perseus Test',
+              content: 'In-depth testing and analysis of the popular JOOLA Perseus paddle',
+              path: '/joola-ben-johns-perseus-test',
               type: 'Paddle Review'
             },
             {
               objectID: '3',
-              title: 'Vatic Pro Prism Flash',
-              content: 'Budget raw carbon fiber paddle made in California',
-              path: '/vatic-pro-prism-flash',
+              title: 'Six Zero Double Black Diamond',
+              content: 'Premium T700 carbon fiber paddle with lifetime warranty and exceptional control',
+              path: '/six-zero-double-black-diamond',
               type: 'Paddle Review'
             },
             {
               objectID: '4',
+              title: 'Vatic Pro Prism Flash',
+              content: 'Budget-friendly raw carbon fiber paddle made in California with great value',
+              path: '/vatic-pro-prism-flash',
+              type: 'Paddle Review'
+            },
+            {
+              objectID: '5',
+              title: 'Selkirk Amped Omni Weight',
+              content: 'Versatile paddle with omni weight technology for customizable feel',
+              path: '/selkirk-amped-omni-weight',
+              type: 'Paddle Review'
+            },
+            {
+              objectID: '6',
+              title: 'CRBN Genesis Power Series 16mm',
+              content: 'Powerful paddle with T700 carbon fiber face and 16mm thickness',
+              path: '/crbn-genesis-power-series-16mm',
+              type: 'Paddle Review'
+            },
+            {
+              objectID: '7',
               title: 'Ultimate Guide 2025',
-              content: 'Complete guide to the best pickleball paddles with expert reviews',
+              content: 'Complete guide to the best pickleball paddles with expert reviews and rankings',
               path: '/ultimate-guide',
               type: 'Guide'
             },
             {
-              objectID: '5',
+              objectID: '8',
               title: 'Beginner Guide',
               content: 'Complete beginner guide to choosing your first pickleball paddle',
               path: '/beginner-guide',
               type: 'Guide'
             },
             {
-              objectID: '6',
+              objectID: '9',
               title: 'Budget Paddles Under $100',
-              content: 'Best budget pickleball paddles that deliver premium performance',
+              content: 'Best budget pickleball paddles that deliver premium performance without breaking the bank',
               path: '/budget-paddles',
               type: 'Guide'
             },
             {
-              objectID: '7',
+              objectID: '10',
               title: 'Premium Paddle Comparison',
-              content: 'Head-to-head comparison of JOOLA, CRBN, Selkirk, and Engage paddles',
+              content: 'Head-to-head comparison of JOOLA, CRBN, Selkirk, and Engage premium paddles',
               path: '/premium-comparison',
               type: 'Comparison'
+            },
+            {
+              objectID: '11',
+              title: 'About',
+              content: 'Learn about our paddle review process and testing methodology',
+              path: '/about',
+              type: 'Page'
+            },
+            {
+              objectID: '12',
+              title: 'Contact',
+              content: 'Get in touch with our paddle review team',
+              path: '/contact',
+              type: 'Page'
             }
           ];
           
