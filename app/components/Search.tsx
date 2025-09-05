@@ -43,17 +43,15 @@ export default function Search() {
         setIsLoading(true);
         
         try {
-          const { results } = await client.search({
-            requests: [
-              {
-                indexName: 'pages', // You might need to adjust this index name
-                query: query,
-                hitsPerPage: 10
-              }
-            ]
+          const searchResult = await client.searchSingleIndex({
+            indexName: 'pages', // You might need to adjust this index name
+            searchParams: {
+              query: query,
+              hitsPerPage: 10
+            }
           });
           
-          const hits = results[0].hits as SearchHit[];
+          const hits = searchResult.hits as SearchHit[];
           setResults(hits);
           setIsOpen(true);
         } catch (error) {

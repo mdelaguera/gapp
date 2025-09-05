@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
-import { client } from '../sanity/lib/client'
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://getapickleballpaddle.com'
   
   // Static pages with their priorities and update frequencies
@@ -68,41 +67,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Fetch dynamic paddle pages from Sanity
-  let paddlePages: MetadataRoute.Sitemap = []
-  
-  try {
-    const paddles = await client.fetch(`
-      *[_type == "paddle" && reviewStatus in ["published", "complete"]] {
-        slug,
-        _updatedAt,
-        reviewStatus
-      }
-    `)
-    
-    paddlePages = paddles.map((paddle: any) => ({
-      url: `${baseUrl}/${paddle.slug.current}`,
-      lastModified: new Date(paddle._updatedAt),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }))
-  } catch (error) {
-    console.log('Could not fetch paddle pages from Sanity, using static fallback')
-    
-    // Fallback to existing paddle pages
-    const existingPaddles = [
-      'joola-ben-johns-perseus',
-      'six-zero-double-black-diamond', 
-      'vatic-pro-prism-flash'
-    ]
-    
-    paddlePages = existingPaddles.map(slug => ({
-      url: `${baseUrl}/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }))
-  }
+  // Static paddle pages
+  const paddlePages: MetadataRoute.Sitemap = [
+    'joola-ben-johns-perseus',
+    'joola-ben-johns-perseus-test',
+    'six-zero-double-black-diamond',
+    'vatic-pro-prism-flash',
+    'selkirk-amped-omni-weight',
+    'crbn-genesis-power-series-16mm'
+  ].map(slug => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
 
   return [...staticPages, ...paddlePages]
 }
