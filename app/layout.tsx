@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     default: 'Get A Pickleball Paddle',
     template: '%s | Get A Pickleball Paddle'
   },
-  description: 'Expert Reviews & Buying Guides for the Best Pickleball Paddles in 2025',
+  description: 'Comprehensive Reviews & Buying Guides for the Best Pickleball Paddles in 2025',
   keywords: ['pickleball paddles', 'paddle reviews', 'best pickleball paddles 2025', 'JOOLA Ben Johns', 'Six Zero Double Black Diamond', 'Vatic Pro', 'carbon fiber paddles', 'polymer core', 'USAPA approved', 'tournament paddles', 'beginner paddles', 'premium paddles', 'paddle comparison', 'buying guide'],
-  authors: [{ name: 'Get A Pickleball Paddle Expert Team' }],
+  authors: [{ name: 'Get A Pickleball Paddle Team' }],
   openGraph: {
     type: 'website',
     siteName: 'Get A Pickleball Paddle',
-    title: 'Best Pickleball Paddles 2025 | Expert Reviews & Buying Guide',
-    description: 'Find your perfect pickleball paddle with our expert reviews of 200+ tested paddles. Compare JOOLA, Six Zero, Vatic Pro & more.',
+    title: 'Best Pickleball Paddles 2025 | Comprehensive Reviews & Buying Guide',
+    description: 'Find your perfect pickleball paddle with our detailed analysis of USAPA-approved paddles. Compare JOOLA, Six Zero, Vatic Pro & more.',
     url: 'https://getapickleballpaddle.com',
     images: [{
       url: '/img/paddle-social-card.jpg',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Pickleball Paddles 2025 | Expert Reviews & Buying Guide',
-    description: 'Find your perfect pickleball paddle with our expert reviews of 200+ tested paddles. Compare JOOLA, Six Zero, Vatic Pro & more.'
+    title: 'Best Pickleball Paddles 2025 | Comprehensive Reviews & Buying Guide',
+    description: 'Find your perfect pickleball paddle with our detailed analysis of USAPA-approved paddles. Compare JOOLA, Six Zero, Vatic Pro & more.'
   },
   alternates: {
     canonical: '/'
@@ -299,7 +299,7 @@ function Footer() {
         </div>
         <div className="footer__bottom text--center">
           <div className="footer__copyright">
-            Copyright © {new Date().getFullYear()} Get A Pickleball Paddle. All rights reserved. | We may earn commission from purchases made through our affiliate links.
+            Copyright © 2025 Get A Pickleball Paddle. All rights reserved. | We may earn commission from purchases made through our affiliate links.
           </div>
         </div>
       </div>

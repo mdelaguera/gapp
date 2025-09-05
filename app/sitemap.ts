@@ -1,91 +1,108 @@
 import { MetadataRoute } from 'next'
+import { client } from '../sanity/lib/client'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://getapickleballpaddle.com'
-  const currentDate = new Date()
-
-  return [
-    // Homepage
+  
+  // Static pages with their priorities and update frequencies
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
       priority: 1,
     },
-    // Main guides
     {
       url: `${baseUrl}/ultimate-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/beginner-guide`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/budget-paddles`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/premium-comparison`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
-    // Product reviews
-    {
-      url: `${baseUrl}/joola-ben-johns-perseus`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/six-zero-double-black-diamond`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/vatic-pro-prism-flash`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    // Legal and info pages
     {
       url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.3,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.4,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/affiliate-disclosure`,
-      lastModified: currentDate,
+      lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
+      lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.2,
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: currentDate,
+      lastModified: new Date(),
       changeFrequency: 'yearly',
-      priority: 0.2,
+      priority: 0.3,
     },
   ]
+
+  // Fetch dynamic paddle pages from Sanity
+  let paddlePages: MetadataRoute.Sitemap = []
+  
+  try {
+    const paddles = await client.fetch(`
+      *[_type == "paddle" && reviewStatus in ["published", "complete"]] {
+        slug,
+        _updatedAt,
+        reviewStatus
+      }
+    `)
+    
+    paddlePages = paddles.map((paddle: any) => ({
+      url: `${baseUrl}/${paddle.slug.current}`,
+      lastModified: new Date(paddle._updatedAt),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+  } catch (error) {
+    console.log('Could not fetch paddle pages from Sanity, using static fallback')
+    
+    // Fallback to existing paddle pages
+    const existingPaddles = [
+      'joola-ben-johns-perseus',
+      'six-zero-double-black-diamond', 
+      'vatic-pro-prism-flash'
+    ]
+    
+    paddlePages = existingPaddles.map(slug => ({
+      url: `${baseUrl}/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+  }
+
+  return [...staticPages, ...paddlePages]
 }

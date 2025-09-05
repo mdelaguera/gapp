@@ -15,17 +15,31 @@ export default function TableOfContents() {
   useEffect(() => {
     // Extract headings from the page
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    const tocItems: TOCItem[] = headings.map((heading) => ({
-      id: heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-') || '',
-      text: heading.textContent || '',
-      level: parseInt(heading.tagName.charAt(1)),
-    }));
+    const usedIds = new Set<string>();
+    
+    const tocItems: TOCItem[] = headings.map((heading, index) => {
+      let baseId = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') || `heading-${index}`;
+      
+      // Ensure unique ID
+      let uniqueId = baseId;
+      let counter = 1;
+      while (usedIds.has(uniqueId)) {
+        uniqueId = `${baseId}-${counter}`;
+        counter++;
+      }
+      usedIds.add(uniqueId);
+      
+      return {
+        id: uniqueId,
+        text: heading.textContent || '',
+        level: parseInt(heading.tagName.charAt(1)),
+      };
+    });
 
     // Set IDs for headings that don't have them
     headings.forEach((heading, index) => {
       if (!heading.id) {
-        const id = tocItems[index].id;
-        heading.id = id;
+        heading.id = tocItems[index].id;
       }
     });
 

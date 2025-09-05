@@ -122,6 +122,189 @@ table {
   text-align: left;
 }
 
+/* === PADDLE REVIEW STYLES === */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  line-height: 1.7;
+}
+
+/* Paddle review page image styling */
+.article-content img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  display: block;
+}
+
+/* Paddle review headings */
+.article-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.2;
+}
+
+.article-content h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 2rem 0 1rem 0;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.article-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+/* Rating and verdict styling */
+.article-content p strong {
+  color: #0891b2;
+  font-weight: 600;
+}
+
+/* Performance breakdown styling */
+.article-content h3[id*="power"]::after,
+.article-content h3[id*="control"]::after,
+.article-content h3[id*="spin"]::after,
+.article-content h3[id*="durability"]::after {
+  content: "";
+  margin-left: 0.5rem;
+}
+
+/* List styling for pros/cons */
+.article-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.article-content li {
+  margin: 0.5rem 0;
+  color: #4a5568;
+}
+
+/* Table styling */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-content th,
+.article-content td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.article-content th {
+  background: #f7fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Blockquote styling */
+.article-content blockquote {
+  border-left: 4px solid #0891b2;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: #f0f9ff;
+  color: #0c4a6e;
+  font-style: italic;
+}
+
+/* HR styling */
+.article-content hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+}
+
+/* Link styling */
+.article-content a {
+  color: #0891b2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.article-content a:hover {
+  color: #0c4a6e;
+  text-decoration: underline;
+}
+
+/* Buy button styling */
+.article-content a[href*="pickleballsuperstore"],
+.article-content a[href*="amazon"] {
+  display: inline-block;
+  background: linear-gradient(135deg, #0891b2, #0c4a6e);
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(8, 145, 178, 0.3);
+}
+
+.article-content a[href*="pickleballsuperstore"]:hover,
+.article-content a[href*="amazon"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(8, 145, 178, 0.4);
+  color: white !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 0.5rem;
+  }
+  
+  .article-content {
+    padding: 1rem 0;
+  }
+  
+  .article-content h1 {
+    font-size: 2rem;
+  }
+  
+  .article-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .article-content img {
+    max-width: 250px;
+  }
+  
+  .article-content a[href*="pickleballsuperstore"],
+  .article-content a[href*="amazon"] {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
 /* === DOCUSAURUS NAVBAR STYLES === */
 .navbar {
   height: 60px;
@@ -353,6 +536,334 @@ table {
   max-width: 1400px !important;
   margin: 0 auto;
   padding: 0 2rem;
+}
+
+/* === NEW PICKLEHEADS-STYLE COMPONENTS === */
+
+/* Circular Rating Component */
+.circular-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-svg {
+  transform: rotate(0deg);
+}
+
+.rating-progress {
+  transition: stroke-dasharray 0.6s ease-in-out;
+}
+
+.rating-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.circular-rating .rating-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* New Paddle Card Styles */
+.paddle-card-new {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.paddle-card-new:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  border-color: #e5e7eb;
+}
+
+.paddle-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.paddle-image-container-new {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  background: #f9fafb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.paddle-image-new {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 4px;
+}
+
+.paddle-highlight-new {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #0891b2;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.paddle-info {
+  flex: 1;
+}
+
+.paddle-name-new {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.paddle-price-new {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+.paddle-best-for {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.paddle-ratings-circular {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.paddle-pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pros-section, .cons-section {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.pros-title, .cons-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.pros-list, .cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros-list li, .cons-list li {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+
+.pros-list li:last-child, .cons-list li:last-child {
+  margin-bottom: 0;
+}
+
+.button-group-new {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.view-button-new {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.view-button-new.primary {
+  background: #0891b2;
+  color: white;
+  border: 2px solid #0891b2;
+}
+
+.view-button-new.primary:hover {
+  background: #0e7490;
+  border-color: #0e7490;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.view-button-new.secondary {
+  background: white;
+  color: #0891b2;
+  border: 2px solid #0891b2;
+}
+
+.view-button-new.secondary:hover {
+  background: #0891b2;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Mobile responsiveness for new cards */
+@media screen and (max-width: 640px) {
+  .paddle-card-new {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  
+  .paddle-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .paddle-image-container-new {
+    width: 150px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  
+  .paddle-ratings-circular {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .paddle-pros-cons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .button-group-new {
+    flex-direction: column;
+  }
+}
+
+/* Author Section */
+.author-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.author-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.author-credentials {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* New Banner Styles */
+.banner-new {
+  padding: 3rem 0 2rem 0;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+  border-bottom: 1px solid #d1fae5;
+}
+
+.banner-content-new {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.banner-title-new {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #065f46;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.banner-subtitle-new {
+  font-size: 1.25rem;
+  color: #047857;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 /* Banner Section */
