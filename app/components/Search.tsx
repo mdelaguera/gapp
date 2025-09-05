@@ -4,10 +4,13 @@ import { useState, useEffect, useRef } from 'react';
 import { algoliasearch } from 'algoliasearch';
 import Link from 'next/link';
 
-const client = algoliasearch(
-  process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID!,
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY!
-);
+// Initialize client conditionally to avoid build errors when env vars are missing
+const client = typeof window !== 'undefined' && process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID && process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
+  ? algoliasearch(
+      process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
+      process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
+    )
+  : null;
 
 interface SearchHit {
   objectID: string;
@@ -43,20 +46,25 @@ export default function Search() {
         setIsLoading(true);
         
         try {
-          const searchResult = await client.searchSingleIndex({
-            indexName: 'pages', // You might need to adjust this index name
-            searchParams: {
-              query: query,
-              hitsPerPage: 10
-            }
-          });
-          
-          const hits = searchResult.hits as SearchHit[];
-          setResults(hits);
-          setIsOpen(true);
+          if (client) {
+            const searchResult = await client.searchSingleIndex({
+              indexName: 'pages', // You might need to adjust this index name
+              searchParams: {
+                query: query,
+                hitsPerPage: 10
+              }
+            });
+            
+            const hits = searchResult.hits as SearchHit[];
+            setResults(hits);
+            setIsOpen(true);
+          } else {
+            // Fallback to local search if Algolia client not available
+            throw new Error('Algolia client not initialized');
+          }
         } catch (error) {
           console.error('Search error:', error);
-          // Fallback to local search if Algolia fails
+          // Fallback to local search
           const searchData = [
             {
               objectID: '1',
