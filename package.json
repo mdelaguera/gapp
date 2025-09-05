@@ -31,5 +31,12 @@
     "@sanity/prettier-config": "^2.0.1",
     "npm-run-all2": "^5.0.2",
     "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "@sanity/cli": "^4.6.1",
+    "@sanity/client": "^7.11.0",
+    "@sanity/image-url": "^1.2.0",
+    "next-sanity": "^10.0.16",
+    "next-seo": "^6.8.0"
   }
 }
