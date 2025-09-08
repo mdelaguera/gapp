@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageLayout from '../components/PageLayout';
+import PaddleCard from '../components/PaddleCard';
 import { beginnerPaddles } from '../data/paddles';
 
 export const metadata: Metadata = {
@@ -44,56 +45,13 @@ export default function BeginnerGuidePage() {
       <p><strong>5. Reasonable Price ($50-150)</strong><br />
       You want quality construction that won't break, but you don't need pro-level features you can't use yet.</p>
 
-      <h2>Beginner Paddle Comparison Chart</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Paddle</th>
-            <th>Price</th>
-            <th>Weight</th>
-            <th>Best For</th>
-            <th>Growth Potential</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Vatic Pro Prism Flash</strong></td>
-            <td>$99</td>
-            <td>7.6-8.0 oz</td>
-            <td>Most beginners</td>
-            <td>Excellent</td>
-          </tr>
-          <tr>
-            <td><strong>Franklin Signature Pro</strong></td>
-            <td>$35.99</td>
-            <td>7.5-8.3 oz</td>
-            <td>Testing interest</td>
-            <td>Limited</td>
-          </tr>
-          <tr>
-            <td><strong>Wilson Energy Pro</strong></td>
-            <td>$70-90</td>
-            <td>7.6-8.0 oz</td>
-            <td>Comfort-focused</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td><strong>HEAD Gravity Tour</strong></td>
-            <td>$120-140</td>
-            <td>7.8 oz</td>
-            <td>Brand preference</td>
-            <td>Good</td>
-          </tr>
-          <tr>
-            <td><strong>Six Zero Double Black Diamond</strong></td>
-            <td>$162-180</td>
-            <td>8.1 oz</td>
-            <td>Committed players</td>
-            <td>Excellent</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Top Beginner Paddle Recommendations</h2>
+      
+      <div className="comparison-cards">
+        {beginnerPaddles.map((paddle, index) => (
+          <PaddleCard key={index} paddle={paddle} />
+        ))}
+      </div>
 
       <h2>How to Choose: Decision Tree</h2>
 

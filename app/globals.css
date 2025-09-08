@@ -2144,3 +2144,335 @@ html {
     order: -1;
   }
 }
+
+/* Single Paddle Review Styles */
+.single-paddle-review {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+}
+
+.paddle-review-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.paddle-review-header h1 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.paddle-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.paddle-hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.paddle-hero-image {
+  text-align: center;
+}
+
+.hero-paddle-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quick-verdict {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.quick-verdict h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.verdict-rating {
+  font-size: 1.1rem;
+  color: #0891b2;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.verdict-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tag.best-for {
+  background: #e6fffa;
+  color: #234e52;
+}
+
+.tag.avoid-if {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.tag.price-range {
+  background: #e6f3ff;
+  color: #2a4365;
+}
+
+.performance-stats h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.performance-section {
+  margin-bottom: 2rem;
+}
+
+.performance-section h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.pros-cons-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.perfect-for, .not-ideal-for {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.perfect-for {
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+}
+
+.not-ideal-for {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+}
+
+.perfect-for h3, .not-ideal-for h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.perfect-for ul, .not-ideal-for ul {
+  padding-left: 1.5rem;
+}
+
+.perfect-for li, .not-ideal-for li {
+  margin-bottom: 0.5rem;
+}
+
+.specs-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.specs-table td {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.specs-table td:first-child {
+  background: #f8fafc;
+  font-weight: 600;
+  width: 200px;
+}
+
+.buy-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.buy-button.primary {
+  background: #0891b2;
+  color: white;
+}
+
+.buy-button.primary:hover {
+  background: #0e7490;
+}
+
+.buy-button.secondary {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.buy-button.secondary:hover {
+  background: #cbd5e0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.nav-links a {
+  color: #0891b2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.review-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Mobile responsiveness for single paddle reviews */
+@media (max-width: 768px) {
+  .single-paddle-review {
+    padding: 1rem;
+  }
+  
+  .paddle-review-header h1 {
+    font-size: 2rem;
+  }
+  
+  .paddle-hero-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pros-cons-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .buy-buttons {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Comparison Cards Layout */
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.specs-comparison-table {
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.specs-comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.specs-comparison-table th,
+.specs-comparison-table td {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.specs-comparison-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.specs-comparison-table td:first-child {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Mobile responsiveness for comparison tables */
+@media (max-width: 768px) {
+  .comparison-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .specs-comparison-table {
+    font-size: 0.9rem;
+  }
+  
+  .specs-comparison-table th,
+  .specs-comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .specs-comparison-table {
+    font-size: 0.8rem;
+  }
+  
+  .specs-comparison-table th,
+  .specs-comparison-table td {
+    padding: 0.5rem;
+  }
+}

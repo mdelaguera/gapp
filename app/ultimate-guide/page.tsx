@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageLayout from '../components/PageLayout';
-import { topPaddles } from '../data/paddles';
+import PaddleCard from '../components/PaddleCard';
+import { topPaddles, premiumPaddles, budgetPaddles } from '../data/paddles';
 
 export const metadata: Metadata = {
   title: 'Best Pickleball Paddles 2025 - Ultimate Guide & Comprehensive Reviews',
@@ -43,103 +44,21 @@ export default function UltimateGuidePage() {
         <li><strong>3.5 Stars</strong>: Good - Meets basic needs with clear weaknesses</li>
       </ul>
 
-      <h2>Paddle Comparison by Category</h2>
+      <h2>Top Paddle Recommendations by Category</h2>
 
-      <h3>Power Players (Aggressive Baseline Style)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Paddle</th>
-            <th>Power Rating</th>
-            <th>Price</th>
-            <th>Best Feature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>JOOLA Ben Johns Perseus</td>
-            <td>4.9/5</td>
-            <td>$279.95</td>
-            <td>CFS technology</td>
-          </tr>
-          <tr>
-            <td>CRBN-1 Power Series</td>
-            <td>4.8/5</td>
-            <td>$249.99</td>
-            <td>Thermoformed construction</td>
-          </tr>
-          <tr>
-            <td>Six Zero Double Black Diamond</td>
-            <td>4.5/5</td>
-            <td>$180.00</td>
-            <td>T700 carbon fiber</td>
-          </tr>
-        </tbody>
-      </table>
+      <h3>🏆 Premium Performance Champions</h3>
+      <div className="comparison-cards">
+        {premiumPaddles.map((paddle, index) => (
+          <PaddleCard key={index} paddle={paddle} />
+        ))}
+      </div>
 
-      <h3>Control Specialists (Precision & Touch)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Paddle</th>
-            <th>Control Rating</th>
-            <th>Price</th>
-            <th>Best Feature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>JOOLA Ben Johns Perseus</td>
-            <td>4.7/5</td>
-            <td>$279.95</td>
-            <td>Pro player design</td>
-          </tr>
-          <tr>
-            <td>Six Zero Double Black Diamond</td>
-            <td>4.8/5</td>
-            <td>$180.00</td>
-            <td>T700 carbon fiber</td>
-          </tr>
-          <tr>
-            <td>Engage Pursuit Pro</td>
-            <td>4.9/5</td>
-            <td>$199.99</td>
-            <td>Control Pro core</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>Budget Champions (Under $150)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Paddle</th>
-            <th>Value Rating</th>
-            <th>Price</th>
-            <th>Best Feature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Vatic Pro Prism Flash</td>
-            <td>5.0/5</td>
-            <td>$99.00</td>
-            <td>Raw carbon fiber</td>
-          </tr>
-          <tr>
-            <td>Franklin Signature Pro</td>
-            <td>4.8/5</td>
-            <td>$35.99</td>
-            <td>Ben Johns technology</td>
-          </tr>
-          <tr>
-            <td>HEAD Gravity Tour</td>
-            <td>4.5/5</td>
-            <td>$89.99</td>
-            <td>Brand reliability</td>
-          </tr>
-        </tbody>
-      </table>
+      <h3>💰 Best Value Budget Options</h3>
+      <div className="comparison-cards">
+        {budgetPaddles.map((paddle, index) => (
+          <PaddleCard key={index} paddle={paddle} />
+        ))}
+      </div>
 
       <h2>Buying Guide: How to Choose Your Perfect Paddle</h2>
 

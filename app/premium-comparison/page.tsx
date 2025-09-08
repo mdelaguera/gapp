@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageLayout from '../components/PageLayout';
+import PaddleCard from '../components/PaddleCard';
 import { premiumPaddles } from '../data/paddles';
 
 export const metadata: Metadata = {
@@ -41,68 +42,60 @@ export default function PremiumComparisonPage() {
 
       <p>Each paddle was evaluated across 8 critical performance categories by advanced players (4.0+ rating) over a 6-week testing period.</p>
 
-      <h2>Head-to-Head Comparison Chart</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>JOOLA Perseus CFS</th>
-            <th>CRBN Genesis</th>
-            <th>Engage Pursuit Pro</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Price</strong></td>
-            <td>$209.96</td>
-            <td>$279.99</td>
-            <td>$199.99</td>
-          </tr>
-          <tr>
-            <td><strong>Weight</strong></td>
-            <td>8.0-8.2 oz</td>
-            <td>Varies by model</td>
-            <td>7.6-8.4 oz</td>
-          </tr>
-          <tr>
-            <td><strong>Core</strong></td>
-            <td>16mm Thermoformed</td>
-            <td>TruFoam 100%</td>
-            <td>Control Pro Black</td>
-          </tr>
-          <tr>
-            <td><strong>Surface</strong></td>
-            <td>Carbon-Flex5</td>
-            <td>Raw Carbon</td>
-            <td>Raw T700 Carbon</td>
-          </tr>
-          <tr>
-            <td><strong>Power Rating</strong></td>
-            <td>8/10</td>
-            <td>7/10</td>
-            <td>7/10</td>
-          </tr>
-          <tr>
-            <td><strong>Control Rating</strong></td>
-            <td>10/10</td>
-            <td>8/10</td>
-            <td>10/10</td>
-          </tr>
-          <tr>
-            <td><strong>Spin Rating</strong></td>
-            <td>9/10</td>
-            <td>9/10</td>
-            <td>9/10</td>
-          </tr>
-          <tr>
-            <td><strong>Durability</strong></td>
-            <td>9/10</td>
-            <td>10/10</td>
-            <td>8/10</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Premium Paddle Visual Comparison</h2>
+      
+      <div className="comparison-cards">
+        {premiumPaddles.map((paddle, index) => (
+          <PaddleCard key={index} paddle={paddle} />
+        ))}
+      </div>
+      
+      <h2>Technical Specifications Comparison</h2>
+      
+      <div className="specs-comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Specification</th>
+              <th>JOOLA Perseus CFS</th>
+              <th>CRBN Genesis</th>
+              <th>Engage Pursuit Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Price</strong></td>
+              <td>$279.95</td>
+              <td>$279.99</td>
+              <td>$199.99</td>
+            </tr>
+            <tr>
+              <td><strong>Weight</strong></td>
+              <td>8.0-8.2 oz</td>
+              <td>Varies by model</td>
+              <td>7.6-8.4 oz</td>
+            </tr>
+            <tr>
+              <td><strong>Core Technology</strong></td>
+              <td>16mm Thermoformed</td>
+              <td>TruFoam 100%</td>
+              <td>Control Pro Black</td>
+            </tr>
+            <tr>
+              <td><strong>Surface Material</strong></td>
+              <td>Carbon-Flex5</td>
+              <td>Raw Carbon</td>
+              <td>Raw T700 Carbon</td>
+            </tr>
+            <tr>
+              <td><strong>Best For</strong></td>
+              <td>Tournament competitors</td>
+              <td>Technology enthusiasts</td>
+              <td>Control specialists</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2>Playing Style Match Guide</h2>
 

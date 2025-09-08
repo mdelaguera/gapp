@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PageLayout from '../components/PageLayout';
+import PaddleCard from '../components/PaddleCard';
 import { budgetPaddles } from '../data/paddles';
 
 export const metadata: Metadata = {
@@ -42,56 +43,13 @@ export default function BudgetPaddlesPage() {
 
       <p><strong>Our Promise:</strong> Every paddle on this list delivers performance that competes with paddles costing $150-250.</p>
 
-      <h2>Budget Paddle Comparison Chart</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Paddle</th>
-            <th>Price</th>
-            <th>Weight</th>
-            <th>Best For</th>
-            <th>Key Feature</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Vatic Pro Prism Flash</strong></td>
-            <td>$99</td>
-            <td>7.6-8.0 oz</td>
-            <td>Most players</td>
-            <td>Carbon fiber surface</td>
-          </tr>
-          <tr>
-            <td><strong>Franklin Signature Pro</strong></td>
-            <td>$35.99</td>
-            <td>7.5-8.3 oz</td>
-            <td>Beginners</td>
-            <td>Ben Johns technology</td>
-          </tr>
-          <tr>
-            <td><strong>HEAD Gravity Tour</strong></td>
-            <td>$69-110</td>
-            <td>7.8 oz</td>
-            <td>Brand loyalists</td>
-            <td>Tennis expertise</td>
-          </tr>
-          <tr>
-            <td><strong>Wilson Energy Pro</strong></td>
-            <td>$70-90</td>
-            <td>7.6-8.0 oz</td>
-            <td>Comfort seekers</td>
-            <td>Wide sweet spot</td>
-          </tr>
-          <tr>
-            <td><strong>Gamma Needle Point</strong></td>
-            <td>$79-95</td>
-            <td>7.5-8.5 oz</td>
-            <td>Spin players</td>
-            <td>Textured surface</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Budget Paddle Visual Comparison</h2>
+      
+      <div className="comparison-cards">
+        {budgetPaddles.map((paddle, index) => (
+          <PaddleCard key={index} paddle={paddle} />
+        ))}
+      </div>
 
       <h2>Complete Budget Setup: Total Cost Breakdown</h2>
 
