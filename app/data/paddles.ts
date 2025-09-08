@@ -1,7 +1,20 @@
 import { PaddleData } from '../components/PaddleCard';
 
-// Featured paddles for different categories
-export const topPaddles: PaddleData[] = [
+// List of paddles with placeholder or broken images that should be hidden
+const PLACEHOLDER_IMAGES = [
+  '/img/paddles/placeholder-paddle.svg',
+  '/img/paddles/crbn-power-series.jpg', // Only 22 bytes - broken
+  '/img/paddles/engage-pursuit-pro-ex.svg', // Using generic SVG
+  '/img/paddles/crbn-trufoam-genesis.svg', // Using generic SVG
+];
+
+// Filter function to remove paddles with placeholder images
+function filterValidPaddles(paddles: PaddleData[]): PaddleData[] {
+  return paddles.filter(paddle => !PLACEHOLDER_IMAGES.includes(paddle.image));
+}
+
+// Featured paddles for different categories (internal - may contain placeholders)
+const topPaddlesRaw: PaddleData[] = [
   {
     name: "JOOLA Ben Johns Perseus",
     price: "$279.95",
@@ -49,7 +62,7 @@ export const topPaddles: PaddleData[] = [
   }
 ];
 
-export const beginnerPaddles: PaddleData[] = [
+const beginnerPaddlesRaw: PaddleData[] = [
   {
     name: "Vatic Pro Prism Flash",
     price: "$99.00",
@@ -97,7 +110,7 @@ export const beginnerPaddles: PaddleData[] = [
   }
 ];
 
-export const budgetPaddles: PaddleData[] = [
+const budgetPaddlesRaw: PaddleData[] = [
   {
     name: "Vatic Pro Prism Flash",
     price: "$99.00",
@@ -145,7 +158,7 @@ export const budgetPaddles: PaddleData[] = [
   }
 ];
 
-export const premiumPaddles: PaddleData[] = [
+const premiumPaddlesRaw: PaddleData[] = [
   {
     name: "JOOLA Ben Johns Perseus",
     price: "$279.95",
@@ -192,3 +205,9 @@ export const premiumPaddles: PaddleData[] = [
     bestFor: "Precision and Touch Players"
   }
 ];
+
+// Export filtered paddle arrays (only paddles with real images)
+export const topPaddles = filterValidPaddles(topPaddlesRaw);
+export const beginnerPaddles = filterValidPaddles(beginnerPaddlesRaw);
+export const budgetPaddles = filterValidPaddles(budgetPaddlesRaw);
+export const premiumPaddles = filterValidPaddles(premiumPaddlesRaw);

@@ -14,7 +14,7 @@
   --sh-property: #73daca;
   --sh-entity: #e0af68;
   
-  /* Docusaurus Variables */
+  /* Site Variables */
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -411,7 +411,7 @@ table {
   text-decoration: none !important;
 }
 
-/* === DOCUSAURUS FOOTER STYLES === */
+/* === FOOTER STYLES === */
 .footer {
   background-color: #2d3748;
   color: white;
@@ -550,7 +550,7 @@ table {
   }
 }
 
-/* === DOCUSAURUS HOMEPAGE STYLES === */
+/* === HOMEPAGE STYLES === */
 
 /* Container */
 .container {
