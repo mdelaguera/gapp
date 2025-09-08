@@ -115,11 +115,30 @@ input[type='email'] {
 }
 
 table {
-  display: block;
-  max-width: fit-content;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
   overflow-x: auto;
-  white-space: nowrap;
+  display: table;
   text-align: left;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile table responsiveness */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .article-content table {
+    font-size: 0.85rem;
+  }
 }
 
 /* === PADDLE REVIEW STYLES === */
@@ -459,10 +478,17 @@ table {
 
 /* Mobile navbar adjustments */
 @media (max-width: 968px) {
+  .navbar {
+    background-color: white !important;
+    min-height: auto;
+  }
+  
   .navbar__inner {
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+    background-color: white;
+    min-height: auto;
   }
   
   .navbar__brand {
@@ -474,12 +500,16 @@ table {
     width: 100%;
     flex-direction: column;
     gap: 1rem;
+    background-color: white;
   }
   
   .navbar__items {
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
   }
   
   .navbar__items--right {
@@ -492,6 +522,8 @@ table {
     padding: 0.5rem 0.75rem !important;
     font-size: 0.9rem !important;
     white-space: nowrap;
+    background-color: #f8f9fa;
+    border-radius: 4px;
   }
   
   .navbar__title {

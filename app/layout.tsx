@@ -242,10 +242,11 @@ function Footer() {
                   style={{
                     padding: '10px 12px',
                     borderRadius: '4px',
-                    border: '1px solid #4a5568',
+                    border: '2px solid #6b7280',
                     backgroundColor: '#374151',
                     color: 'white',
-                    fontSize: '0.9rem'
+                    fontSize: '0.9rem',
+                    outline: 'none'
                   }}
                 />
                 <button 
