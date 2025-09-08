@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://getapickleballpaddle.com',
+  siteUrl: process.env.SITE_URL || 'https://www.getapickleballpaddle.com',
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   exclude: [
@@ -65,7 +65,7 @@ module.exports = {
       }
     ],
     additionalSitemaps: [
-      'https://getapickleballpaddle.com/sitemap.xml',
+      'https://www.getapickleballpaddle.com/sitemap.xml',
     ]
   },
   

@@ -8,7 +8,7 @@ import Search from './components/Search';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://getapickleballpaddle.com'),
+  metadataBase: new URL('https://www.getapickleballpaddle.com'),
   title: {
     default: 'Get A Pickleball Paddle',
     template: '%s | Get A Pickleball Paddle'
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Get A Pickleball Paddle',
     title: 'Best Pickleball Paddles 2025 | Comprehensive Reviews & Buying Guide',
     description: 'Find your perfect pickleball paddle with our detailed analysis of USAPA-approved paddles. Compare JOOLA, Six Zero, Vatic Pro & more.',
-    url: 'https://getapickleballpaddle.com',
+    url: 'https://www.getapickleballpaddle.com',
     images: [{
       url: '/img/paddle-social-card.jpg',
       width: 1200,

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://getapickleballpaddle.com'
+  const baseUrl = 'https://www.getapickleballpaddle.com'
   
   // Static pages with their priorities and update frequencies
   const staticPages: MetadataRoute.Sitemap = [
@@ -67,10 +67,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Static paddle pages
+  // Static paddle pages (excluding test pages)
   const paddlePages: MetadataRoute.Sitemap = [
     'joola-ben-johns-perseus',
-    'joola-ben-johns-perseus-test',
     'six-zero-double-black-diamond',
     'vatic-pro-prism-flash',
     'selkirk-amped-omni-weight',
