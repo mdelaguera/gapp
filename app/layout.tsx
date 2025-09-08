@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import TableOfContents from './components/TableOfContents';
 import Search from './components/Search';
+import Header from './components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -155,34 +156,6 @@ function YouTubeIcon() {
   );
 }
 
-function Header() {
-  return (
-    <header className="navbar navbar--fixed-top" style={{ backgroundColor: 'white', borderBottom: '1px solid #e9ecef' }}>
-      <div className="navbar__inner">
-        <div className="navbar__brand">
-          <a href="/" className="navbar__title" style={{ color: '#2d3748', textDecoration: 'none', fontSize: '1.5rem', fontWeight: '600', display: 'flex', alignItems: 'center' }}>
-            <PaddleIcon />
-            Get A Pickleball Paddle
-          </a>
-        </div>
-        <nav className="navbar__nav">
-          <div className="navbar__items">
-            <a href="/ultimate-guide" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Ultimate Guide</a>
-            <a href="/beginner-guide" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Beginner Guide</a>
-            <a href="/budget-paddles" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Budget Paddles</a>
-            <a href="/premium-comparison" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Premium Paddles</a>
-          </div>
-          <div className="navbar__items navbar__items--right">
-            <div className="navbar__item">
-              <Search />
-            </div>
-            <a href="/affiliate-disclosure" className="navbar__item navbar__link" style={{ color: '#4a5568', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '1rem' }}>Disclosure</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-  );
-}
 
 function Footer() {
   return (

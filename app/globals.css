@@ -324,20 +324,32 @@ table {
   }
 }
 
-/* === DOCUSAURUS NAVBAR STYLES === */
+/* === MODERN NAVBAR STYLES === */
 .navbar {
   height: 60px;
   display: flex;
   align-items: center;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
 }
 
-.navbar--fixed-top {
-  position: sticky;
-  top: 0;
+/* Desktop navigation - hidden on mobile */
+.navbar__nav--desktop {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* Mobile hamburger - hidden on desktop */
+.navbar__hamburger {
+  display: none !important;
+}
+
+/* Mobile navigation menu */
+.navbar__nav--mobile {
+  display: none;
 }
 
 .navbar__inner {
@@ -477,53 +489,31 @@ table {
 }
 
 /* Mobile navbar adjustments */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .navbar {
     background-color: white !important;
-    min-height: auto;
+    height: auto;
+    min-height: 60px;
   }
   
   .navbar__inner {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    background-color: white;
-    min-height: auto;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    width: 100%;
   }
   
   .navbar__brand {
-    width: 100%;
-    justify-content: center;
+    flex-shrink: 0;
   }
   
-  .navbar__nav {
-    width: 100%;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: white;
+  /* Hide desktop navigation on mobile */
+  .navbar__nav--desktop {
+    display: none;
   }
   
-  .navbar__items {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    background-color: white;
-    padding: 0.5rem;
-    border-radius: 8px;
-  }
-  
-  .navbar__items--right {
-    order: -1;
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .navbar__link {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.9rem !important;
-    white-space: nowrap;
-    background-color: #f8f9fa;
-    border-radius: 4px;
+  /* Show hamburger button on mobile */
+  .navbar__hamburger {
+    display: flex !important;
   }
   
   .navbar__title {
@@ -531,8 +521,7 @@ table {
   }
   
   .search-container {
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 100%;
   }
   
   .row {
