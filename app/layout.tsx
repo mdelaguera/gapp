@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 import TableOfContents from './components/TableOfContents';
 import Search from './components/Search';
 import Header from './components/Header';
+import PromoBanner from './components/PromoBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -67,6 +68,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <TableOfContents />
+          <PromoBanner />
           <Analytics />
         </div>
       </body>

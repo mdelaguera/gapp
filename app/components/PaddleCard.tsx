@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { buildAffiliateLink, getPartnerPromoText } from '../../lib/affiliateLinks';
 
 interface PaddleData {
   name: string;
@@ -112,12 +113,12 @@ export default function PaddleCard({paddle}: {paddle: PaddleData}) {
           Read Full Review
         </Link>
         <Link 
-          href="https://pickleballsuperstore.com/discount/Michael-111480"
+          href={buildAffiliateLink('pickleballSuperstore')}
           className="view-button-new secondary"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Save 10%
+          {getPartnerPromoText('pickleballSuperstore')}
         </Link>
       </div>
     </div>

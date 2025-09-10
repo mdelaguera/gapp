@@ -332,6 +332,8 @@ table {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 100;
+  background-color: white !important;
+  border-bottom: 1px solid #e9ecef;
 }
 
 /* Desktop navigation - hidden on mobile */
@@ -494,6 +496,11 @@ table {
     background-color: white !important;
     height: auto;
     min-height: 60px;
+  }
+  
+  /* Mobile navigation menu */
+  .navbar__nav--mobile {
+    display: block;
   }
   
   .navbar__inner {
@@ -1960,6 +1967,153 @@ html {
     content: " (" attr(href) ")";
     font-size: 0.8em;
     color: #666;
+  }
+}
+
+/* === PROMOTIONAL BANNER STYLES === */
+.promo-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.promo-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.promo-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.promo-highlight {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.promo-description {
+  font-size: 0.9rem;
+  color: #f0fff4;
+  line-height: 1.3;
+}
+
+.promo-button {
+  background: white;
+  color: #28a745;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
+
+.promo-button:hover {
+  background: #28a745;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-close {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.promo-close:hover {
+  opacity: 1;
+}
+
+/* Mobile responsiveness for promo banner */
+@media (max-width: 768px) {
+  .promo-banner-content {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .promo-text {
+    align-items: center;
+  }
+  
+  .promo-description {
+    font-size: 0.85rem;
+  }
+  
+  .promo-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .promo-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-banner-content {
+    padding: 0.75rem 1rem;
+  }
+  
+  .promo-highlight {
+    font-size: 1.1rem;
+  }
+  
+  .promo-description {
+    font-size: 0.8rem;
+  }
+  
+  .promo-button {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 
